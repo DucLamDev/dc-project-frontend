@@ -1,0 +1,358 @@
+{
+  "topBar": "Site protégé par mot de passe",
+  "email": "contact@agba-etekpor.com",
+  "brand": {
+    "date": "10 OCTOBRE 2026",
+    "place": "COTO DE CAZA, CALIFORNIE",
+    "copyright": "© 2026 Danielle & Chris · Tous droits réservés"
+  },
+  "nav": {
+    "home": "Accueil",
+    "story": "Notre Histoire",
+    "schedule": "Chronologie",
+    "rsvp": "RSVP",
+    "dress": "Dress Code",
+    "menu": "Menu",
+    "gifts": "Liste de Mariage",
+    "accommodations": "Hébergements",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "eyebrow": "Nous nous marions !",
+    "names": "DANIELLE & CHRIS",
+    "cta": "Découvrir notre mariage",
+    "stamp": "10.10.26"
+  },
+  "overview": {
+    "title": "Toutes les informations pour notre grand jour",
+    "items": [
+      {
+        "id": "home",
+        "number": "01.",
+        "title": "Accueil",
+        "description": "Bienvenue sur notre site de mariage. Nous sommes ravis de partager ce moment avec vous."
+      },
+      {
+        "id": "story",
+        "number": "02.",
+        "title": "Notre Histoire",
+        "description": "Découvrez notre histoire, nos souvenirs et les moments qui nous ont menés jusqu'ici."
+      },
+      {
+        "id": "schedule",
+        "number": "03.",
+        "title": "Chronologie",
+        "description": "Le déroulé de notre journée de mariage et tous les moments clés à ne pas manquer."
+      },
+      {
+        "id": "rsvp",
+        "number": "04.",
+        "title": "RSVP",
+        "description": "Confirmez votre présence avant le 15 juillet 2026 via notre formulaire RSVP."
+      },
+      {
+        "id": "dress",
+        "number": "05.",
+        "title": "Dress Code",
+        "description": "Découvrez le dress code de notre mariage pour être au diapason de la journée."
+      },
+      {
+        "id": "menu",
+        "number": "06.",
+        "title": "Menu",
+        "description": "Découvrez le menu qui vous attend pour célébrer ce moment avec nous."
+      },
+      {
+        "id": "gifts",
+        "number": "07.",
+        "title": "Liste de Mariage",
+        "description": "Votre présence est notre plus beau cadeau. Si vous souhaitez participer à notre avenir, c'est ici."
+      },
+      {
+        "id": "accommodations",
+        "number": "08.",
+        "title": "8 Hébergements",
+        "description": "Nos recommandations d'hébergements à proximité pour profiter pleinement du week-end."
+      },
+      {
+        "id": "contact",
+        "number": "09.",
+        "title": "Contact",
+        "description": "Nos wedding planners sont à votre disposition pour toute question."
+      },
+      {
+        "id": "faq",
+        "number": "10.",
+        "title": "FAQ",
+        "description": "Retrouvez ici les réponses aux questions que vous vous posez peut-être déjà."
+      }
+    ]
+  },
+  "story": {
+    "title": "Notre Histoire",
+    "subtitle": "Deux âmes, une histoire",
+    "items": [
+      {
+        "year": "2018",
+        "title": "Notre rencontre",
+        "description": "Tout a commencé par un sourire et une conversation qui n'en finissait pas."
+      },
+      {
+        "year": "2020",
+        "title": "Notre premier voyage",
+        "description": "Un road trip inoubliable qui a scellé notre complicité."
+      },
+      {
+        "year": "2023",
+        "title": "La grande question",
+        "description": "Le début d'un nouveau chapitre, avec la plus belle des questions."
+      },
+      {
+        "year": "2026",
+        "title": "Notre mariage",
+        "description": "Nous avons hâte de célébrer notre amour avec vous !"
+      }
+    ]
+  },
+  "ceremony": {
+    "title": "Cérémonie & Lieu",
+    "subtitle": "Coto de Caza, Californie",
+    "copy": "La cérémonie aura lieu dans un cadre naturel et chaleureux, entourée de jardins, de montagnes douces et de ceux que nous aimons.",
+    "address": "Coto de Caza Golf & Racquet Club",
+    "gps": "33.5945, -117.5867",
+    "maps": "Ouvrir Google Maps"
+  },
+  "schedule": {
+    "title": "Chronologie",
+    "subtitle": "Déroulé de notre journée",
+    "items": [
+      {
+        "time": "09:00",
+        "title": "Cérémonie",
+        "description": "L'échange de nos vœux entourés de nos proches."
+      },
+      {
+        "time": "10:00",
+        "title": "Photos en extérieur",
+        "description": "Un moment pour capturer les premiers souvenirs du jour."
+      },
+      {
+        "time": "11:00 - 16:00",
+        "title": "Temps libre",
+        "description": "Une pause pour se détendre avant la suite des festivités."
+      },
+      {
+        "time": "16:00",
+        "title": "Cocktail",
+        "description": "Un moment convivial pour marquer la suite du jour."
+      },
+      {
+        "time": "19:00",
+        "title": "Réception",
+        "description": "Un dîner raffiné suivi de surprises et de discours."
+      },
+      {
+        "time": "22:30",
+        "title": "Première danse",
+        "description": "La piste s'ouvre pour célébrer tous ensemble."
+      },
+      {
+        "time": "23:30",
+        "title": "Pièce montée",
+        "description": "Une dernière douceur avant de continuer la soirée."
+      }
+    ]
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Merci de confirmer votre présence",
+    "deadlineLabel": "Merci de répondre avant le",
+    "deadline": "15 JUILLET 2026",
+    "aside": "Nous avons hâte de célébrer avec vous !",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone",
+    "attendance": "Serez-vous présent(e) ?",
+    "partySize": "Nombre de personnes",
+    "message": "Un message pour nous ?",
+    "menuChoice": "Choix du menu",
+    "dietary": "Allergies ou régime alimentaire",
+    "submit": "Envoyer ma réponse",
+    "submitting": "Envoi en cours...",
+    "success": "Merci, votre réponse a bien été enregistrée.",
+    "lookupOk": "Nom trouvé dans la liste des invités.",
+    "lookupMissing": "Nous ne trouvons pas encore ce nom. Vérifiez l'orthographe de votre invitation.",
+    "lookupIdle": "Votre nom sur l'invitation",
+    "required": "Veuillez compléter les champs obligatoires.",
+    "options": {
+      "ceremony": "Seulement la cérémonie",
+      "reception": "Seulement la réception",
+      "both": "Cérémonie et réception",
+      "decline": "Non, avec regret"
+    },
+    "menus": {
+      "menu1": "Menu 1",
+      "menu2": "Menu 2"
+    }
+  },
+  "dress": {
+    "title": "Dress Code",
+    "subtitle": "Black Tie Optional",
+    "copy": "Nous vous invitons à vous habiller élégamment pour célébrer cette journée unique avec nous.",
+    "forHer": {
+      "title": "Pour elles",
+      "copy": "Robes longues ou cocktails élégants."
+    },
+    "forHim": {
+      "title": "Pour eux",
+      "copy": "Costume ou smoking."
+    },
+    "note": "L'important est que vous vous sentiez à l'aise et prêts à faire la fête !",
+    "avoid": "Merci d'éviter le blanc pur et les couleurs néon.",
+    "swatches": [
+      {
+        "name": "Champagne",
+        "hex": "#E6D6BD"
+      },
+      {
+        "name": "Terracotta",
+        "hex": "#C36B47"
+      },
+      {
+        "name": "Sauge",
+        "hex": "#899174"
+      },
+      {
+        "name": "Charbon",
+        "hex": "#2C2824"
+      }
+    ]
+  },
+  "menu": {
+    "title": "Le Menu",
+    "subtitle": "Un dîner raffiné préparé avec amour",
+    "menu1": "Menu 1",
+    "menu2": "Menu 2",
+    "items": {
+      "menu1": [
+        {
+          "course": "Entrée",
+          "dish": "Carpaccio de Saint-Jacques, agrumes & huile d'olive"
+        },
+        {
+          "course": "Plat",
+          "dish": "Filet de bœuf rôti, légumes de saison & jus au thym"
+        },
+        {
+          "course": "Dessert",
+          "dish": "Pièce montée des mariés & assortiment de douceurs"
+        },
+        {
+          "course": "Vins",
+          "dish": "Sélection de vins fins, blanc & rouge"
+        }
+      ],
+      "menu2": [
+        {
+          "course": "Entrée",
+          "dish": "Salade de burrata, tomates anciennes & basilic"
+        },
+        {
+          "course": "Plat",
+          "dish": "Risotto crémeux aux champignons, herbes fraîches"
+        },
+        {
+          "course": "Dessert",
+          "dish": "Tarte fine aux fruits de saison & crème légère"
+        },
+        {
+          "course": "Vins",
+          "dish": "Accord sans alcool ou sélection du domaine"
+        }
+      ]
+    }
+  },
+  "gifts": {
+    "title": "Liste de Mariage",
+    "subtitle": "Votre présence est notre plus beau cadeau",
+    "copy": "Pour celles et ceux qui souhaitent participer à notre prochain chapitre, une cagnotte simple est disponible.",
+    "cta": "Contribuer via Revolut"
+  },
+  "accommodations": {
+    "title": "Hébergements",
+    "subtitle": "Nos recommandations",
+    "note": "Nous vous recommandons de réserver à l'avance.",
+    "maps": "Voir la carte",
+    "items": [
+      {
+        "name": "The Ranch at Laguna Beach",
+        "distance": "12 min du lieu",
+        "url": "https://www.theranchlb.com"
+      },
+      {
+        "name": "Ayres Hotel & Spa",
+        "distance": "20 min du lieu",
+        "url": "https://www.ayreshotels.com"
+      },
+      {
+        "name": "Laguna Cliffs Marriott",
+        "distance": "25 min du lieu",
+        "url": "https://www.marriott.com"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question avant le grand jour ?",
+    "planner": "Wedding Planner",
+    "name": "Arielle Beaumont",
+    "phone": "+1 949 555 0126",
+    "email": "planner@danielle-chris.com",
+    "copy": "Pour toute précision sur l'organisation, les accès ou les demandes particulières, notre équipe vous répondra avec plaisir."
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Les réponses utiles",
+    "items": [
+      {
+        "question": "Y aura-t-il un parking sur place ?",
+        "answer": "Oui, un parking invité sera indiqué à l'entrée du lieu. Merci d'arriver quelques minutes en avance."
+      },
+      {
+        "question": "Les enfants sont-ils invités ?",
+        "answer": "Nous aimons vos enfants, mais la réception sera principalement réservée aux adultes, sauf mention sur votre invitation."
+      },
+      {
+        "question": "Quel temps prévoir en octobre ?",
+        "answer": "Les journées sont généralement douces et les soirées plus fraîches. Une veste légère est recommandée."
+      },
+      {
+        "question": "Puis-je venir accompagné(e) ?",
+        "answer": "Merci de vous référer au nombre de personnes indiqué sur votre invitation ou dans le formulaire RSVP."
+      }
+    ]
+  },
+  "bottomCta": {
+    "title": "Nous avons hâte de célébrer avec vous !",
+    "copy": "N'oubliez pas de confirmer votre présence.",
+    "button": "Répondre au RSVP"
+  },
+  "admin": {
+    "title": "Admin",
+    "password": "Mot de passe admin",
+    "login": "Se connecter",
+    "logout": "Déconnexion",
+    "stats": "Statistiques RSVP",
+    "guests": "Invités",
+    "responses": "Réponses",
+    "export": "Exporter CSV",
+    "import": "Importer CSV/XLSX",
+    "addGuest": "Ajouter un invité",
+    "fullName": "Nom complet",
+    "email": "Email",
+    "phone": "Téléphone",
+    "allowedPlusOnes": "Accompagnants autorisés",
+    "status": "Statut"
+  }
+}
