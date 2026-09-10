@@ -1,5 +1,5 @@
 {
-  "topBar": "Password protected site",
+  "topBar": "Password-protected guest site",
   "email": "ahteventpro@gmail.com",
   "brand": {
     "date": "NOVEMBER 7, 2026",
@@ -15,7 +15,7 @@
     "title": "Welcome to Stella & Geovanni's wedding",
     "password": "Password",
     "submit": "Enter the site",
-    "error": "Incorrect password. Please check the password received with your invitation."
+    "error": "Incorrect password. Please check the password shared with your invitation."
   },
   "nav": {
     "home": "Home",
@@ -30,143 +30,124 @@
     "faq": "FAQ"
   },
   "hero": {
-    "eyebrow": "We're getting married!",
+    "eyebrow": "We are getting married!",
     "names": "STELLA & GEOVANNI",
     "cta": "Discover our wedding",
     "stamp": "07.11.26"
   },
   "overview": {
-    "title": "Everything you need for our wedding day",
+    "title": "All the details for our big day",
     "items": [
       {
         "id": "home",
         "number": "01.",
         "title": "Home",
-        "description": "Welcome to our wedding website, created to guide you simply before the big day."
+        "description": "Date, place and wedding mood."
       },
       {
         "id": "story",
         "number": "02.",
         "title": "Our Story",
-        "description": "From a hello to a forever: discover the path that led us here."
+        "description": "From a hello to forever."
       },
       {
         "id": "schedule",
         "number": "03.",
         "title": "Timeline",
-        "description": "The flow of the day, from the civil ceremony to the cake cutting."
+        "description": "The key moments of the day."
       },
       {
         "id": "rsvp",
         "number": "04.",
         "title": "RSVP",
-        "description": "Confirm your attendance before October 9, 2026 using the RSVP form."
+        "description": "Reply before 09.10.26."
       },
       {
         "id": "dress",
         "number": "05.",
         "title": "Dress Code",
-        "description": "The requested tones for the day: black, beige and terracotta."
+        "description": "Black, beige and terracotta."
       },
       {
         "id": "menu",
         "number": "06.",
         "title": "Menu",
-        "description": "Choose your main course in the RSVP form."
+        "description": "Choose your menu in RSVP."
       },
       {
         "id": "gifts",
         "number": "07.",
-        "title": "Wedding Registry",
-        "description": "No material gifts: a virtual envelope is available for those who wish to contribute."
+        "title": "Registry",
+        "description": "A virtual envelope."
       },
       {
         "id": "accommodations",
         "number": "08.",
-        "title": "10 Accommodations",
-        "description": "A selection of hotels near the town hall to help you plan your stay."
+        "title": "Hotels",
+        "description": "Suggestions near the town hall."
       },
       {
         "id": "contact",
         "number": "09.",
         "title": "Contact",
-        "description": "Naomi and Nadia, our wedding planners, are available before and during the wedding."
+        "description": "Our wedding planners."
       },
       {
         "id": "faq",
         "number": "10.",
         "title": "FAQ",
-        "description": "Find helpful answers about outfits, gifts, children and plus-ones."
+        "description": "Helpful guest answers."
       }
     ]
   },
   "story": {
     "title": "Our Story",
-    "subtitle": "From a hello to a forever",
+    "subtitle": "From a hello to forever",
     "intro": [
-      "It all began with a simple hello, under a tree where students parked their scooters.",
-      "Here, year after year, is the path that led us here."
+      "It began with a simple hello, then friendship slowly became obvious."
     ],
     "items": [
       {
         "year": "2017",
         "title": "Law school",
-        "subtitle": "Just classmates",
-        "description": [
-          "A hello, a smile exchanged under the tree where students parked their scooters. Moments that seemed insignificant, but that would mark the beginning of everything.",
-          "It was through a mutual friend that we really started talking. A beautiful friendship was born; conversations, regular catch-ups, a closeness that quietly grew.",
-          "Geovanni shared his old exam papers to help Stella prepare for her exams. We were simply friends. Or so we thought."
-        ]
+        "subtitle": "The first hello",
+        "description": "A smile under the students' tree, then conversations that kept coming back."
       },
       {
         "year": "2018",
         "title": "France",
         "subtitle": "Miles apart",
-        "description": [
-          "Our paths separated. Geovanni left for France. Despite the distance and our new lives, we kept in touch as good friends."
-        ]
+        "description": "Geovanni moved to France. Distance arrived, but the bond stayed."
       },
       {
         "year": "2019",
         "title": "Tunisia, then France",
-        "subtitle": "Never really far apart",
-        "description": [
-          "Stella then left for Tunisia. Then, toward the end of the year, something changed: a little flirting here, a few extra attentions there... and, almost without realizing it, our beautiful friendship turned into a love story.",
-          "In December 2019, we officially became a couple. A new adventure began: a long-distance love, with miles between us, but a growing desire to stay close."
-        ]
+        "subtitle": "Never really far",
+        "description": "By the end of the year, our friendship had become a love story."
       },
       {
         "year": "2020",
-        "title": "What if it was all written?",
-        "subtitle": "Together on the same soil",
-        "description": [
-          "Fate, after keeping us apart, finally decided to bring us together: Stella, too, moved to France.",
-          "That's when Stella discovered a rather funny little secret: Geovanni had always had a soft spot for her, long before she suspected it. Screenshots of her status updates, carefully saved. Conversations with our mutual friend, accompanied by a mysterious “Mrs. Etekpor”...",
-          "The funniest part? At the time, we were still just friends. Proof that sometimes the heart knows what we don't yet."
-        ]
+        "title": "Together",
+        "subtitle": "On the same soil",
+        "description": "Stella joined France. A new life together began."
       },
       {
         "year": "2026",
         "title": "Forever",
-        "subtitle": "Our most beautiful chapter",
-        "description": [
-          "Years have passed since that first hello under the tree. What started as a simple encounter, then a beautiful friendship, has become a solid, deep, and precious love.",
-          "Today, after all these years, we have chosen to seal this love and write together the most beautiful chapter of our story: that of our union."
-        ]
+        "subtitle": "Our wedding",
+        "description": "We are writing this new chapter surrounded by the people we love."
       }
     ],
     "closing": [
-      "And if our story began with a simple “hello,”",
-      "today we're lucky enough to be able to give it",
-      "the most beautiful of “forevers.”"
+      "Thank you for being part of our story."
     ]
   },
   "ceremony": {
-    "title": "Ceremony & Venues",
+    "title": "Ceremony & Venue",
     "subtitle": "Toulouse, France",
-    "copy": "The civil ceremony will take place at 9:00 AM. The cocktail reception and reception will begin at 4:00 PM. Venue details and the GPS meeting point will be included again in the RSVP confirmation email.",
+    "copy": "The civil ceremony starts at 9:00 AM. Cocktail and reception begin at 4:00 PM.",
     "address": "Toulouse Town Hall",
-    "gps": "GPS meeting point shared by email",
+    "gps": "GPS point sent with the RSVP confirmation",
     "maps": "Open Google Maps",
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mairie+de+Toulouse"
   },
@@ -175,74 +156,74 @@
     "subtitle": "The flow of our day",
     "items": [
       {
-        "time": "9:00 AM",
+        "time": "09:00",
         "title": "Ceremony",
-        "description": "Civil ceremony surrounded by our loved ones."
+        "description": "Civil ceremony."
       },
       {
-        "time": "10:00 AM",
-        "title": "Outdoor photo shoot",
-        "description": "A moment to capture the first memories of the day."
+        "time": "10:00",
+        "title": "Outdoor photos",
+        "description": "Couple photos."
       },
       {
-        "time": "11:00 AM - 4:00 PM",
+        "time": "11:00 - 16:00",
         "title": "Free time",
-        "description": "A pause to rest or explore the city before the celebration continues."
+        "description": "A quiet pause."
       },
       {
-        "time": "4:00 PM",
-        "title": "Cocktail reception",
-        "description": "A convivial moment to begin the rest of the festivities."
+        "time": "16:00",
+        "title": "Cocktail",
+        "description": "Drinks and reunions."
       },
       {
-        "time": "7:00 PM",
+        "time": "19:00",
         "title": "Reception",
-        "description": "A celebration dinner followed by surprises and speeches."
+        "description": "Dinner and celebration."
       },
       {
-        "time": "10:30 PM",
+        "time": "22:30",
         "title": "First dance",
-        "description": "The dance floor opens so we can celebrate together."
+        "description": "Time to dance."
       },
       {
-        "time": "11:30 PM",
-        "title": "Cake cutting",
-        "description": "A final sweet moment before the evening continues."
+        "time": "23:30",
+        "title": "Cake",
+        "description": "A sweet moment."
       }
     ]
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Thank you for confirming your attendance",
-    "deadlineLabel": "RSVP deadline",
+    "subtitle": "Please confirm your presence",
+    "deadlineLabel": "Kindly reply before",
     "deadline": "OCTOBER 9, 2026",
-    "eventLabel": "Wedding information",
+    "eventLabel": "Save this",
     "eventDetails": [
-      "Date: November 7, 2026",
+      "November 7, 2026",
       "Civil ceremony: 9:00 AM",
-      "Cocktail reception and reception: 4:00 PM"
+      "Cocktail: 4:00 PM"
     ],
-    "aside": "An automatic confirmation will be sent to you by email after submission.",
-    "name": "First and last name",
+    "aside": "A confirmation email will be sent to you.",
+    "name": "Full name",
     "email": "Email address",
-    "phone": "Phone number",
+    "phone": "Phone",
     "attendance": "Your attendance",
     "partySize": "Number of guests",
     "message": "A message for us?",
     "menuChoice": "Menu choice",
-    "dietary": "Dietary restrictions or allergies",
-    "submit": "Send my reply",
+    "dietary": "Dietary restrictions",
+    "submit": "Send my response",
     "submitting": "Sending...",
     "success": "Thank you, your response has been saved.",
     "lookupOk": "Name found on the guest list.",
-    "lookupMissing": "We cannot find that name yet. Please check the spelling on your invitation.",
-    "lookupIdle": "Your name as shown on the invitation",
+    "lookupMissing": "We cannot find this name yet. Please check the spelling on your invitation.",
+    "lookupIdle": "Your name on the invitation",
     "required": "Please complete the required fields.",
     "options": {
-      "ceremony": "Attending the ceremony only",
-      "reception": "Attending the reception only",
-      "both": "Attending both",
-      "decline": "Not attending, with regret"
+      "ceremony": "Ceremony only",
+      "reception": "Reception only",
+      "both": "Ceremony and reception",
+      "decline": "Unable to attend"
     },
     "menus": {
       "menu1": "Menu 1",
@@ -251,18 +232,18 @@
   },
   "dress": {
     "title": "Dress Code",
-    "subtitle": "Black, beige & terracotta",
-    "copy": "The wedding colors are black, beige and terracotta. These tones work for both the ceremony and the reception.",
+    "subtitle": "Black Tie Optional",
+    "copy": "We invite you to dress elegantly in the wedding color palette.",
     "forHer": {
       "title": "For her",
-      "copy": "Elegant outfits in the wedding tones."
+      "copy": "Long or cocktail dress."
     },
     "forHim": {
       "title": "For him",
-      "copy": "A suit or elegant outfit in the wedding tones."
+      "copy": "Suit or tuxedo."
     },
-    "note": "You do not need two different outfits for the ceremony and the reception.",
-    "avoid": "Please avoid colors outside the requested palette.",
+    "note": "One outfit is enough for the whole day.",
+    "avoid": "Preferred palette: black, beige, terracotta.",
     "swatches": [
       {
         "name": "Light beige",
@@ -283,112 +264,106 @@
     ]
   },
   "menu": {
-    "title": "Menu",
-    "subtitle": "Main course choice",
-    "menu1": "Menu 1",
-    "menu2": "Menu 2",
-    "items": {
-      "menu1": [
-        {
-          "course": "Main course",
-          "dish": "Menu 1 to be selected in the RSVP form."
-        },
-        {
-          "course": "Restrictions",
-          "dish": "Please mention any allergies or dietary restrictions in the form."
-        }
-      ],
-      "menu2": [
-        {
-          "course": "Main course",
-          "dish": "Menu 2 to be selected in the RSVP form."
-        },
-        {
-          "course": "Restrictions",
-          "dish": "Your choice will appear in the guest management table for the couple and caterer."
-        }
-      ]
-    }
+    "title": "The Menu",
+    "subtitle": "Your choice for the reception",
+    "items": [
+      {
+        "course": "Menu 1",
+        "dish": "Choose it in the RSVP form."
+      },
+      {
+        "course": "Menu 2",
+        "dish": "Choose it in the RSVP form."
+      },
+      {
+        "course": "Allergies",
+        "dish": "Please share dietary restrictions."
+      },
+      {
+        "course": "RSVP",
+        "dish": "Your choice will be sent to the team."
+      }
+    ]
   },
   "gifts": {
     "title": "Wedding Registry",
-    "subtitle": "Your presence is the most beautiful gift",
-    "copy": "Your presence by our side is the most beautiful gift of all. We don't have a wedding registry, but if you'd like to help us take the first steps of this new life together, you can give us a virtual envelope by clicking the link below. Thank you from the bottom of our hearts for your generosity. Stella and Geovanni",
-    "cta": "Give a virtual envelope",
+    "subtitle": "Your presence is our greatest gift",
+    "copy": "We do not wish to receive material gifts. A virtual envelope is available for anyone who would like to support our new life together.",
+    "cta": "Offer an envelope",
     "url": "https://revolut.me/djorre2zu2/pocket/QefboxXvh0"
   },
   "accommodations": {
-    "title": "Accommodations",
+    "title": "Hotels",
     "subtitle": "Our recommendations",
-    "note": "This list is provided for information only to save you research time. You are free to choose other hotels or Airbnb options.",
+    "note": "We recommend booking in advance.",
     "maps": "View map",
     "items": [
       {
-        "name": "Hôtel Albert 1er",
-        "description": "Modern-style 3-star hotel, known for its award-winning breakfast and warm welcome.",
-        "distance": "About 200 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJN6uWRp68rhIRC9VoO58Xhso"
-      },
-      {
-        "name": "Hôtel du Grand Balcon",
-        "description": "Historic establishment, just steps from Place du Capitole.",
-        "distance": "About 150 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
-      },
-      {
-        "name": "Hôtel Le Moderne",
-        "description": "Small Art Deco hotel with well-appointed rooms, highly rated by travelers.",
-        "distance": "About 330 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJX1RyQRC9rhIRxxs3Cic5v9E"
-      },
-      {
-        "name": "Hôtel Le Père Léon",
-        "description": "Hotel with a French restaurant, central location near the Esquirol metro station.",
-        "distance": "About 440 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJG6EqWp28rhIROX9K9rGFUwQ"
-      },
-      {
-        "name": "Hôtel Mercure Toulouse Centre Wilson Capitole",
-        "description": "Large, well-located hotel with on-site parking, close to Place du Capitole.",
-        "distance": "About 330 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
-      },
-      {
-        "name": "Hôtel Héliot, Cosy Places",
-        "description": "Charming address on a quiet street, tasteful decor, highly praised for its hospitality.",
-        "distance": "About 510 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJuV_n4Ji8rhIRRQY8BpdNeQs"
-      },
-      {
-        "name": "Novotel Toulouse Centre Wilson",
-        "description": "Well-located major chain hotel, convenient for business or leisure stays.",
-        "distance": "About 230 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
-      },
-      {
-        "name": "Hôtel Mercure Toulouse Centre Saint-Georges",
-        "description": "4-star hotel with a pool, in the heart of the old town.",
-        "distance": "About 350 m from the town hall.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
-      },
-      {
-        "name": "Ibis Styles Toulouse Centre Capitole",
-        "description": "Unbeatable location right on the square, excellent value for money.",
-        "distance": "About 100 m from the town hall.",
+        "name": "Ibis Styles Capitole",
+        "description": "Very central, on Place du Capitole.",
+        "distance": "100 m away.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
       },
       {
-        "name": "Alfred Hotels Toulouse Centre Wilson",
-        "description": "Recently opened, highly rated, cozy rooms and well-liked breakfast.",
-        "distance": "About 520 m from the town hall.",
+        "name": "Hôtel du Grand Balcon",
+        "description": "Historic address near the Capitole.",
+        "distance": "150 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
+      },
+      {
+        "name": "Hôtel Albert 1er",
+        "description": "Modern and well-located hotel.",
+        "distance": "200 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJN6uWRp68rhIRC9VoO58Xhso"
+      },
+      {
+        "name": "Novotel Centre Wilson",
+        "description": "Practical central stay.",
+        "distance": "230 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+      },
+      {
+        "name": "Hôtel Le Moderne",
+        "description": "Small Art Deco hotel.",
+        "distance": "330 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJX1RyQRC9rhIRxxs3Cic5v9E"
+      },
+      {
+        "name": "Mercure Wilson Capitole",
+        "description": "Large hotel with parking.",
+        "distance": "330 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
+      },
+      {
+        "name": "Mercure Saint-Georges",
+        "description": "4-star hotel with a pool.",
+        "distance": "350 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
+      },
+      {
+        "name": "Hôtel Le Père Léon",
+        "description": "Central, near Esquirol.",
+        "distance": "440 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJG6EqWp28rhIROX9K9rGFUwQ"
+      },
+      {
+        "name": "Hôtel Héliot",
+        "description": "Quiet and cosy address.",
+        "distance": "510 m away.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJuV_n4Ji8rhIRRQY8BpdNeQs"
+      },
+      {
+        "name": "Alfred Hotels Wilson",
+        "description": "Cosy rooms.",
+        "distance": "520 m away.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJQS5mDJm8rhIRJa5wkZ0b7pE"
       }
     ]
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "A question before the big day?",
-    "copy": "So that the couple can fully enjoy their day with complete peace of mind, we are here to answer all your questions and support you. Should you have any concerns at all, please contact us directly by phone or WhatsApp.",
+    "subtitle": "Need help?",
+    "copy": "For any question before or during the wedding, please contact our wedding planners directly.",
     "planners": [
       {
         "role": "Wedding planner",
@@ -406,39 +381,39 @@
   },
   "faq": {
     "title": "FAQ",
-    "subtitle": "Helpful answers",
+    "subtitle": "Practical questions",
     "items": [
       {
-        "question": "Do we need two different outfits for the ceremony and the reception?",
-        "answer": "No, it is not mandatory. Some colors work for both the ceremony and the reception: #D8D0C2, #DCC9A6 and #914F3C."
+        "question": "Do we need two outfits?",
+        "answer": "No. One outfit in the wedding palette works for the whole day."
       },
       {
-        "question": "If we don't have Revolut, can we give a material gift?",
-        "answer": "The payment link is accessible even if you don't have Revolut. If you run into any issues, please contact one of the two wedding planners. The couple does not wish to receive material gifts."
+        "question": "Can we offer a physical gift?",
+        "answer": "The couple prefers a virtual envelope. The Revolut link works even without an account."
       },
       {
-        "question": "Do we get discounts at the listed hotels?",
-        "answer": "Unfortunately not. This list is provided for information only, to save you some research. You are free to choose other hotels or Airbnb options."
+        "question": "Are there hotel discounts?",
+        "answer": "No, the list is only a helpful suggestion. You may choose any hotel or Airbnb."
       },
       {
-        "question": "Are there any specific arrangements for children?",
-        "answer": "The reception venue has a room dedicated to children. However, each parent is responsible for their own child, and no childcare service will be provided."
+        "question": "Are children planned for?",
+        "answer": "A children's room is available, without childcare service."
       },
       {
-        "question": "During the break from 11:00 AM to 4:00 PM, can we wait at the reception venue?",
-        "answer": "The reception venue will be in the midst of preparations for the evening and unfortunately won't be able to welcome you before 4:00 PM. We invite you to make the most of this break to rest at your accommodation or explore the city."
+        "question": "Can we wait at the reception venue from 11 AM to 4 PM?",
+        "answer": "No, the venue will be prepared. Please use the break to rest or visit Toulouse."
       },
       {
         "question": "Can I bring a plus-one?",
-        "answer": "Invitations are individual and personal. If your partner has not received the site access link and password, this unfortunately means they have not been invited. If you are a couple or a family and each of you has received the link and password, please register individually, including children aged 2 and over."
+        "answer": "Invitations are nominative. Thank you for respecting the invitations received."
       }
     ]
   },
   "legal": {
     "noticeTitle": "Legal Notice",
-    "notice": "This private website is intended only for guests of Stella and Geovanni's wedding. It centralizes practical information and RSVP responses related to the event.",
-    "privacyTitle": "Privacy Policy",
-    "privacy": "Data submitted through the RSVP form is used only to organize the wedding: name, email, phone number, attendance, menu choice and dietary restrictions. It is not sold or shared with third parties outside event organization needs."
+    "notice": "Private site dedicated to the guests of Stella and Geovanni's wedding.",
+    "privacyTitle": "Privacy",
+    "privacy": "RSVP information is used only for wedding organization."
   },
   "footer": {
     "navigation": "Navigation",
@@ -449,7 +424,7 @@
   },
   "bottomCta": {
     "title": "We cannot wait to celebrate with you!",
-    "copy": "Do not forget to confirm your attendance before October 9, 2026.",
+    "copy": "Please remember to confirm your presence.",
     "button": "Reply to RSVP"
   },
   "admin": {
@@ -457,16 +432,16 @@
     "password": "Admin password",
     "login": "Log in",
     "logout": "Log out",
-    "stats": "RSVP stats",
+    "stats": "RSVP statistics",
     "guests": "Guests",
     "responses": "Responses",
     "export": "Export CSV",
     "import": "Import CSV/XLSX",
     "addGuest": "Add guest",
-    "fullName": "First and last name",
+    "fullName": "Full name",
     "email": "Email",
     "phone": "Phone",
-    "allowedPlusOnes": "Allowed plus ones",
+    "allowedPlusOnes": "Allowed plus-ones",
     "status": "Status"
   }
 }

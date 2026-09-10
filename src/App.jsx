@@ -58,6 +58,25 @@ function CakeFallback(props) {
   return <Heart {...props} />;
 }
 
+function CoupleNames({ names }) {
+  const [left, right] = names.split(" & ");
+
+  if (!left || !right) {
+    return names;
+  }
+
+  return (
+    <>
+      <span>{left} &</span>
+      <span>{right}</span>
+    </>
+  );
+}
+
+function parseDistance(distance) {
+  return Number(distance?.match(/\d+/)?.[0] || 9999);
+}
+
 function App() {
   const isAdmin = window.location.pathname.startsWith("/admin");
   return isAdmin ? <AdminApp /> : <PublicWeddingSite />;
@@ -289,7 +308,9 @@ function Hero({ scrollTo, t }) {
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="script-line">{t("hero.eyebrow")}</p>
-          <h1>{t("hero.names")}</h1>
+          <h1>
+            <CoupleNames names={t("hero.names")} />
+          </h1>
           <Divider />
           <div className="date-stack">
             <strong>{t("brand.date")}</strong>
@@ -650,20 +671,12 @@ function DressCodeSection({ t }) {
 }
 
 function MenuSection({ t }) {
-  const [activeMenu, setActiveMenu] = useState("menu1");
-  const menuItems = t(`menu.items.${activeMenu}`, { returnObjects: true });
+  const menuItems = t("menu.items", { returnObjects: true });
 
   return (
     <section id="menu" className="menu-section section-offset">
       <div className="container">
         <SectionTitle title={t("menu.title")} subtitle={t("menu.subtitle")} />
-        <div className="segmented-control" role="tablist" aria-label="Menu options">
-          {["menu1", "menu2"].map((menu) => (
-            <button key={menu} className={activeMenu === menu ? "active" : ""} type="button" onClick={() => setActiveMenu(menu)}>
-              {t(`menu.${menu}`)}
-            </button>
-          ))}
-        </div>
         <div className="menu-grid">
           {menuItems.map((item) => (
             <article className="menu-column" key={item.course}>
@@ -698,7 +711,9 @@ function GiftsSection({ t }) {
 }
 
 function AccommodationsSection({ t }) {
-  const items = t("accommodations.items", { returnObjects: true });
+  const items = [...t("accommodations.items", { returnObjects: true })]
+    .sort((a, b) => parseDistance(a.distance) - parseDistance(b.distance))
+    .slice(0, 3);
 
   return (
     <section id="accommodations" className="accommodation-section section-offset">
@@ -713,7 +728,7 @@ function AccommodationsSection({ t }) {
                 <p>{item.description}</p>
                 <span className="hotel-distance">{item.distance}</span>
                 <a href={item.url} target="_blank" rel="noreferrer">
-                  {item.url.replace("https://", "")}
+                  {t("accommodations.maps")}
                 </a>
               </div>
             </article>
@@ -754,7 +769,7 @@ function ContactSection({ t }) {
 
 function FaqSection({ t }) {
   const items = t("faq.items", { returnObjects: true });
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
 
   return (
     <section id="faq" className="faq-section section-offset">
