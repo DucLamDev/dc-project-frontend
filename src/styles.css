@@ -580,6 +580,68 @@ img {
   font-style: italic;
 }
 
+.access-gate {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background:
+    linear-gradient(rgba(253, 251, 247, 0.88), rgba(253, 251, 247, 0.94)),
+    url("/images/stationery-cta.webp") center / cover;
+}
+
+.access-card {
+  width: min(100%, 28rem);
+  display: grid;
+  gap: 1rem;
+  border: 1px solid rgba(58, 51, 44, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 250, 244, 0.94);
+  padding: 2.4rem;
+  box-shadow: 0 24px 70px rgba(58, 51, 44, 0.14);
+}
+
+.access-card .logo-mark {
+  justify-self: center;
+  font-size: 3.4rem;
+}
+
+.access-language {
+  justify-self: end;
+}
+
+.access-card p {
+  margin: 0;
+  color: var(--clay);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.access-card h1 {
+  margin: 0;
+  color: #172033;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.access-card label {
+  display: grid;
+  gap: 0.5rem;
+  color: #172033;
+  font-weight: 700;
+}
+
+.access-card input {
+  width: 100%;
+  border: 1px solid rgba(23, 32, 51, 0.28);
+  border-radius: 5px;
+  background: #fffdf8;
+  padding: 0.85rem 0.95rem;
+  color: #172033;
+}
+
 .story-section,
 .rsvp-section,
 .dress-section,
@@ -592,9 +654,38 @@ img {
 
 .story-grid {
   display: grid;
-  grid-template-columns: minmax(17rem, 0.72fr) minmax(0, 1.28fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(17rem, 0.82fr);
   gap: 3.2rem;
-  align-items: center;
+  align-items: start;
+}
+
+.story-intro,
+.story-closing {
+  max-width: 46rem;
+  margin: 0 auto 3rem;
+  color: #273044;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.story-closing {
+  margin: 3rem auto 0;
+  color: #1d2535;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.story-intro p,
+.story-closing p {
+  margin: 0;
+}
+
+.story-intro p + p,
+.story-closing p + p {
+  margin-top: 0.35rem;
 }
 
 .story-timeline {
@@ -644,6 +735,14 @@ img {
   font-weight: 600;
 }
 
+.story-moment em {
+  display: block;
+  margin: -0.25rem 0 0.65rem;
+  color: var(--clay);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+}
+
 .schedule-item h3 {
   white-space: nowrap;
 }
@@ -654,6 +753,10 @@ img {
   margin: 0;
   color: #273044;
   line-height: 1.8;
+}
+
+.story-moment p + p {
+  margin-top: 0.75rem;
 }
 
 .story-collage img {
@@ -722,11 +825,34 @@ img {
   padding-bottom: 0;
 }
 
+.schedule-scroller {
+  overflow-x: auto;
+  overflow-y: visible;
+  margin-inline: -0.75rem;
+  padding: 0.3rem 0.75rem 0.8rem;
+  scrollbar-color: rgba(195, 107, 71, 0.6) transparent;
+  scrollbar-width: thin;
+}
+
+.schedule-scroller::-webkit-scrollbar {
+  height: 6px;
+}
+
+.schedule-scroller::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.schedule-scroller::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(195, 107, 71, 0.52);
+}
+
 .schedule-track {
   position: relative;
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.1rem;
+  width: max(100%, 98rem);
 }
 
 .schedule-track::before {
@@ -744,6 +870,7 @@ img {
   display: grid;
   justify-items: center;
   gap: 0.7rem;
+  min-width: 0;
   color: #1d2535;
   text-align: center;
 }
@@ -767,8 +894,9 @@ img {
 }
 
 .schedule-item p {
-  max-width: 11.5rem;
+  max-width: 12.4rem;
   font-size: 0.93rem;
+  text-wrap: balance;
 }
 
 .timeline-banner {
@@ -922,6 +1050,24 @@ img {
   font-size: 1.7rem;
 }
 
+.rsvp-event-list {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rsvp-event-list p {
+  margin: 0;
+  color: var(--clay-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.rsvp-event-list span {
+  color: #273044;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .rsvp-card em {
   max-width: 15rem;
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -1031,6 +1177,21 @@ img {
   color: #273044;
   font-size: 0.88rem;
   font-weight: 700;
+}
+
+.dress-color-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.dress-color-row span {
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid rgba(58, 51, 44, 0.18);
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(58, 51, 44, 0.1);
 }
 
 .mini-heart-line {
@@ -1185,6 +1346,12 @@ img {
 .hotel-card p {
   margin: 0;
   color: #273044;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.hotel-card .hotel-distance {
+  color: #273044;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.35rem;
   font-style: italic;
@@ -1214,6 +1381,17 @@ img {
 
 .contact-card {
   align-content: center;
+}
+
+.planner-entry {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.planner-entry + .planner-entry {
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid rgba(195, 107, 71, 0.28);
 }
 
 .contact-card a {
@@ -1262,6 +1440,37 @@ img {
 .faq-item p {
   margin: 0;
   padding: 0 1.2rem 1.2rem;
+  color: #30394c;
+  line-height: 1.7;
+}
+
+.legal-section {
+  padding: 4.5rem 0;
+  background: #f8f5f0;
+  border-block: 1px solid rgba(58, 51, 44, 0.08);
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.legal-grid article {
+  border-left: 1px solid rgba(195, 107, 71, 0.35);
+  padding-left: 1.4rem;
+}
+
+.legal-grid h2 {
+  margin: 0 0 0.8rem;
+  color: #172033;
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.legal-grid p {
+  margin: 0;
   color: #30394c;
   line-height: 1.7;
 }
@@ -1562,16 +1771,9 @@ th {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .schedule-track {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .schedule-track::before {
-    display: none;
-  }
-
-  .schedule-item h3 {
-    white-space: normal;
+  .schedule-scroller {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
   }
 }
 
@@ -1591,6 +1793,7 @@ th {
   .rsvp-grid,
   .dress-grid,
   .contact-grid,
+  .legal-grid,
   .bottom-cta {
     grid-template-columns: 1fr;
   }
@@ -1704,7 +1907,6 @@ th {
 
   .mobile-nav,
   .overview-grid,
-  .schedule-track,
   .hotel-grid,
   .footer-grid,
   .stat-grid,

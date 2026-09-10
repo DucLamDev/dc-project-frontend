@@ -68,6 +68,8 @@ function PublicWeddingSite() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [scrollProgress, setScrollProgress] = useState(0);
+  const sitePassword = import.meta.env.VITE_SITE_PASSWORD;
+  const [siteUnlocked, setSiteUnlocked] = useState(() => !sitePassword || window.localStorage.getItem("wedding_site_access") === sitePassword);
 
   useEffect(() => {
     const sections = navItems
@@ -130,6 +132,10 @@ function PublicWeddingSite() {
     document.documentElement.lang = language;
   };
 
+  if (!siteUnlocked) {
+    return <PasswordGate changeLanguage={changeLanguage} i18n={i18n} onUnlock={() => setSiteUnlocked(true)} sitePassword={sitePassword} t={t} />;
+  }
+
   return (
     <div className="site-shell">
       <TopBar t={t} i18n={i18n} changeLanguage={changeLanguage} />
@@ -154,6 +160,7 @@ function PublicWeddingSite() {
         <AccommodationsSection t={t} />
         <ContactSection t={t} />
         <FaqSection t={t} />
+        <LegalSection t={t} />
         <BottomCta scrollTo={scrollTo} t={t} />
       </main>
       <Footer scrollTo={scrollTo} t={t} />
@@ -194,8 +201,8 @@ function Header({ activeSection, mobileOpen, scrollProgress, setMobileOpen, scro
   return (
     <header className="main-header">
       <div className="container nav-wrap">
-        <button className="logo-mark" type="button" onClick={() => scrollTo("home")} aria-label="Danielle and Chris">
-          D<span></span>C
+        <button className="logo-mark" type="button" onClick={() => scrollTo("home")} aria-label={t("hero.names")}>
+          {t("brand.initials.left")}<span></span>{t("brand.initials.right")}
         </button>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
@@ -231,6 +238,51 @@ function Header({ activeSection, mobileOpen, scrollProgress, setMobileOpen, scro
   );
 }
 
+function PasswordGate({ changeLanguage, i18n, onUnlock, sitePassword, t }) {
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const submit = (event) => {
+    event.preventDefault();
+
+    if (password.trim() === sitePassword) {
+      window.localStorage.setItem("wedding_site_access", sitePassword);
+      onUnlock();
+      return;
+    }
+
+    setError(t("access.error"));
+  };
+
+  return (
+    <main className="access-gate">
+      <form className="access-card" onSubmit={submit}>
+        <div className="access-language language-switch" aria-label="Language switcher">
+          {["fr", "en"].map((lng) => (
+            <button key={lng} className={i18n.language === lng ? "active" : ""} type="button" onClick={() => changeLanguage(lng)}>
+              {lng.toUpperCase()}
+            </button>
+          ))}
+        </div>
+        <div className="logo-mark">
+          {t("brand.initials.left")}<span></span>{t("brand.initials.right")}
+        </div>
+        <p>{t("access.label")}</p>
+        <h1>{t("access.title")}</h1>
+        <label>
+          {t("access.password")}
+          <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} autoFocus />
+        </label>
+        <button className="primary-button clay" type="submit">
+          {t("access.submit")}
+          <ArrowRight size={18} />
+        </button>
+        {error && <p className="form-status error">{error}</p>}
+      </form>
+    </main>
+  );
+}
+
 function Hero({ scrollTo, t }) {
   return (
     <section id="home" className="hero-section section-offset">
@@ -257,7 +309,7 @@ function Hero({ scrollTo, t }) {
           </div>
           <Flower2 className="botanical-line hero-flower" strokeWidth={1} />
           <div className="date-stamp">
-            <span>DANIELLE & CHRIS</span>
+            <span>{t("hero.names")}</span>
             <strong>{t("hero.stamp")}</strong>
           </div>
         </div>
@@ -297,11 +349,20 @@ function Overview({ scrollTo, t }) {
 
 function StorySection({ t }) {
   const items = t("story.items", { returnObjects: true });
+  const intro = t("story.intro", { returnObjects: true });
+  const closing = t("story.closing", { returnObjects: true });
 
   return (
     <section id="story" className="story-section section-offset">
       <div className="container">
         <SectionTitle title={t("story.title")} subtitle={t("story.subtitle")} />
+        {Array.isArray(intro) && (
+          <div className="story-intro">
+            {intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        )}
         <div className="story-grid">
           <div className="story-timeline">
             {items.map((item) => (
@@ -309,7 +370,8 @@ function StorySection({ t }) {
                 <span className="timeline-dot"></span>
                 <strong>{item.year}</strong>
                 <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                {item.subtitle && <em>{item.subtitle}</em>}
+                {Array.isArray(item.description) ? item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{item.description}</p>}
               </article>
             ))}
           </div>
@@ -317,6 +379,13 @@ function StorySection({ t }) {
             <img src="/images/story-collage.webp" alt="" />
           </div>
         </div>
+        {Array.isArray(closing) && (
+          <div className="story-closing">
+            {closing.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -335,7 +404,7 @@ function CeremonySection({ t }) {
           <h3>{t("ceremony.address")}</h3>
           <p>{t("brand.place")}</p>
           <span>{t("ceremony.gps")}</span>
-          <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Coto+de+Caza+Golf+%26+Racquet+Club" target="_blank" rel="noreferrer">
+          <a className="text-link" href={t("ceremony.mapsUrl")} target="_blank" rel="noreferrer">
             {t("ceremony.maps")}
             <ArrowRight size={16} />
           </a>
@@ -352,19 +421,21 @@ function ScheduleSection({ t }) {
     <section id="schedule" className="schedule-section section-offset">
       <div className="container">
         <SectionTitle title={t("schedule.title")} subtitle={t("schedule.subtitle")} />
-        <div className="schedule-track">
-          {items.map((item, index) => {
-            const Icon = scheduleIcons[index] || Heart;
-            return (
-              <article className="schedule-item" key={`${item.time}-${item.title}`}>
-                <Icon size={42} strokeWidth={1.2} />
-                <span className="schedule-dot"></span>
-                <strong>{item.time}</strong>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </article>
-            );
-          })}
+        <div className="schedule-scroller">
+          <div className="schedule-track">
+            {items.map((item, index) => {
+              const Icon = scheduleIcons[index] || Heart;
+              return (
+                <article className="schedule-item" key={`${item.time}-${item.title}`}>
+                  <Icon size={42} strokeWidth={1.2} />
+                  <span className="schedule-dot"></span>
+                  <strong>{item.time}</strong>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </div>
       <img className="timeline-banner" src="/images/timeline-dinner.webp" alt="" />
@@ -519,6 +590,12 @@ function RsvpSection({ t }) {
           </form>
           <aside className="rsvp-card">
             <MailCheck size={54} strokeWidth={1.2} />
+            <div className="rsvp-event-list">
+              <p>{t("rsvp.eventLabel")}</p>
+              {t("rsvp.eventDetails", { returnObjects: true }).map((detail) => (
+                <span key={detail}>{detail}</span>
+              ))}
+            </div>
             <p>{t("rsvp.deadlineLabel")}</p>
             <strong>{t("rsvp.deadline")}</strong>
             <Divider />
@@ -532,6 +609,8 @@ function RsvpSection({ t }) {
 }
 
 function DressCodeSection({ t }) {
+  const swatches = t("dress.swatches", { returnObjects: true });
+
   return (
     <section id="dress" className="dress-section section-offset">
       <div className="container dress-panel">
@@ -552,6 +631,13 @@ function DressCodeSection({ t }) {
         </div>
         <div className="dress-bottom-note">
           <p>{t("dress.note")}</p>
+          {Array.isArray(swatches) && (
+            <div className="dress-color-row">
+              {swatches.map((swatch) => (
+                <span key={swatch.hex} title={swatch.name} style={{ background: swatch.hex }}></span>
+              ))}
+            </div>
+          )}
           <div className="mini-heart-line">
             <span></span>
             <Heart size={14} />
@@ -602,7 +688,7 @@ function GiftsSection({ t }) {
           <SectionTitle title={t("gifts.title")} subtitle={t("gifts.subtitle")} align="left" />
           <p>{t("gifts.copy")}</p>
         </div>
-        <a className="primary-button" href="https://revolut.me/" target="_blank" rel="noreferrer">
+        <a className="primary-button" href={t("gifts.url")} target="_blank" rel="noreferrer">
           {t("gifts.cta")}
           <ArrowRight size={18} />
         </a>
@@ -624,7 +710,8 @@ function AccommodationsSection({ t }) {
               <img src={`/images/${hotelImages[index % hotelImages.length]}`} alt="" />
               <div>
                 <h3>{item.name}</h3>
-                <p>{item.distance}</p>
+                <p>{item.description}</p>
+                <span className="hotel-distance">{item.distance}</span>
                 <a href={item.url} target="_blank" rel="noreferrer">
                   {item.url.replace("https://", "")}
                 </a>
@@ -639,6 +726,8 @@ function AccommodationsSection({ t }) {
 }
 
 function ContactSection({ t }) {
+  const planners = t("contact.planners", { returnObjects: true });
+
   return (
     <section id="contact" className="contact-section section-offset">
       <div className="container contact-grid">
@@ -648,10 +737,15 @@ function ContactSection({ t }) {
         </div>
         <div className="contact-card">
           <Phone size={40} strokeWidth={1.2} />
-          <span>{t("contact.planner")}</span>
-          <h3>{t("contact.name")}</h3>
-          <a href={`tel:${t("contact.phone")}`}>{t("contact.phone")}</a>
-          <a href={`mailto:${t("contact.email")}`}>{t("contact.email")}</a>
+          {Array.isArray(planners) &&
+            planners.map((planner) => (
+              <div className="planner-entry" key={`${planner.role}-${planner.name}`}>
+                <span>{planner.role}</span>
+                <h3>{planner.name}</h3>
+                {planner.phone && <a href={`tel:${planner.phone}`}>{planner.phone}</a>}
+                {planner.email && <a href={`mailto:${planner.email}`}>{planner.email}</a>}
+              </div>
+            ))}
         </div>
       </div>
     </section>
@@ -700,19 +794,36 @@ function BottomCta({ scrollTo, t }) {
   );
 }
 
+function LegalSection({ t }) {
+  return (
+    <section id="legal" className="legal-section section-offset">
+      <div className="container legal-grid">
+        <article>
+          <h2>{t("legal.noticeTitle")}</h2>
+          <p>{t("legal.notice")}</p>
+        </article>
+        <article id="privacy">
+          <h2>{t("legal.privacyTitle")}</h2>
+          <p>{t("legal.privacy")}</p>
+        </article>
+      </div>
+    </section>
+  );
+}
+
 function Footer({ scrollTo, t }) {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <button className="logo-mark" type="button" onClick={() => scrollTo("home")} aria-label="Danielle and Chris">
-            D<span></span>C
+          <button className="logo-mark" type="button" onClick={() => scrollTo("home")} aria-label={t("hero.names")}>
+            {t("brand.initials.left")}<span></span>{t("brand.initials.right")}
           </button>
           <Heart size={16} />
           <strong>{t("brand.date")}</strong>
         </div>
         <div className="footer-column">
-          <h3>Navigation</h3>
+          <h3>{t("footer.navigation")}</h3>
           <div className="footer-links">
             {navItems.map((item) => (
               <button key={item.id} type="button" onClick={() => scrollTo(item.id)}>
@@ -722,7 +833,7 @@ function Footer({ scrollTo, t }) {
           </div>
         </div>
         <div className="footer-column">
-          <h3>Suivez-nous</h3>
+          <h3>{t("footer.follow")}</h3>
           <div className="social-row">
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
               <Camera size={20} />
@@ -733,9 +844,9 @@ function Footer({ scrollTo, t }) {
           </div>
         </div>
         <div className="footer-column">
-          <h3>Informations légales</h3>
-          <a href="#legal">Mentions légales</a>
-          <a href="#privacy">Politique de confidentialité</a>
+          <h3>{t("footer.legal")}</h3>
+          <a href="#legal">{t("footer.legalNotice")}</a>
+          <a href="#privacy">{t("footer.privacy")}</a>
         </div>
       </div>
       <p>{t("brand.copyright")}</p>
@@ -954,13 +1065,15 @@ function AdminApp() {
 }
 
 function LogoBlock() {
+  const { t } = useTranslation();
+
   return (
     <div className="footer-brand compact">
       <div className="logo-mark">
-        D<span></span>C
+        {t("brand.initials.left")}<span></span>{t("brand.initials.right")}
       </div>
       <Heart size={16} />
-      <strong>10 OCTOBRE 2026</strong>
+      <strong>{t("brand.date")}</strong>
     </div>
   );
 }

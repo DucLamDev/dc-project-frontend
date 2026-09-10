@@ -1,10 +1,21 @@
 {
   "topBar": "Site protégé par mot de passe",
-  "email": "contact@agba-etekpor.com",
+  "email": "ahteventpro@gmail.com",
   "brand": {
-    "date": "10 OCTOBRE 2026",
-    "place": "COTO DE CAZA, CALIFORNIE",
-    "copyright": "© 2026 Danielle & Chris · Tous droits réservés"
+    "date": "07 NOVEMBRE 2026",
+    "place": "TOULOUSE, FRANCE",
+    "copyright": "© 2026 Stella & Geovanni · Tous droits réservés",
+    "initials": {
+      "left": "S",
+      "right": "G"
+    }
+  },
+  "access": {
+    "label": "Accès invité",
+    "title": "Bienvenue au mariage de Stella & Geovanni",
+    "password": "Mot de passe",
+    "submit": "Entrer sur le site",
+    "error": "Mot de passe incorrect. Merci de vérifier le mot de passe reçu avec votre invitation."
   },
   "nav": {
     "home": "Accueil",
@@ -20,9 +31,9 @@
   },
   "hero": {
     "eyebrow": "Nous nous marions !",
-    "names": "DANIELLE & CHRIS",
+    "names": "STELLA & GEOVANNI",
     "cta": "Découvrir notre mariage",
-    "stamp": "10.10.26"
+    "stamp": "07.11.26"
   },
   "overview": {
     "title": "Toutes les informations pour notre grand jour",
@@ -31,97 +42,133 @@
         "id": "home",
         "number": "01.",
         "title": "Accueil",
-        "description": "Bienvenue sur notre site de mariage. Nous sommes ravis de partager ce moment avec vous."
+        "description": "Bienvenue sur notre site de mariage, pensé pour vous guider simplement avant le grand jour."
       },
       {
         "id": "story",
         "number": "02.",
         "title": "Notre Histoire",
-        "description": "Découvrez notre histoire, nos souvenirs et les moments qui nous ont menés jusqu'ici."
+        "description": "D'un bonjour à un pour toujours : découvrez le chemin qui nous a menés jusqu'ici."
       },
       {
         "id": "schedule",
         "number": "03.",
         "title": "Chronologie",
-        "description": "Le déroulé de notre journée de mariage et tous les moments clés à ne pas manquer."
+        "description": "Le déroulé de la journée, de la cérémonie civile à la coupure du gâteau."
       },
       {
         "id": "rsvp",
         "number": "04.",
         "title": "RSVP",
-        "description": "Confirmez votre présence avant le 15 juillet 2026 via notre formulaire RSVP."
+        "description": "Confirmez votre présence avant le 09 octobre 2026 via le formulaire RSVP."
       },
       {
         "id": "dress",
         "number": "05.",
         "title": "Dress Code",
-        "description": "Découvrez le dress code de notre mariage pour être au diapason de la journée."
+        "description": "Les tons souhaités pour la journée : noir, beige et terracotta."
       },
       {
         "id": "menu",
         "number": "06.",
         "title": "Menu",
-        "description": "Découvrez le menu qui vous attend pour célébrer ce moment avec nous."
+        "description": "Choisissez votre plat de résistance dans le formulaire RSVP."
       },
       {
         "id": "gifts",
         "number": "07.",
         "title": "Liste de Mariage",
-        "description": "Votre présence est notre plus beau cadeau. Si vous souhaitez participer à notre avenir, c'est ici."
+        "description": "Pas de cadeaux matériels : une enveloppe virtuelle est disponible pour ceux qui le souhaitent."
       },
       {
         "id": "accommodations",
         "number": "08.",
-        "title": "8 Hébergements",
-        "description": "Nos recommandations d'hébergements à proximité pour profiter pleinement du week-end."
+        "title": "10 Hébergements",
+        "description": "Une sélection d'hôtels proches de la mairie pour vous aider à préparer votre séjour."
       },
       {
         "id": "contact",
         "number": "09.",
         "title": "Contact",
-        "description": "Nos wedding planners sont à votre disposition pour toute question."
+        "description": "Naomi et Nadia, nos wedding planners, sont disponibles avant et pendant le mariage."
       },
       {
         "id": "faq",
         "number": "10.",
         "title": "FAQ",
-        "description": "Retrouvez ici les réponses aux questions que vous vous posez peut-être déjà."
+        "description": "Retrouvez les réponses utiles au sujet des tenues, cadeaux, enfants et accompagnants."
       }
     ]
   },
   "story": {
     "title": "Notre Histoire",
-    "subtitle": "Deux âmes, une histoire",
+    "subtitle": "D'un bonjour à un pour toujours",
+    "intro": [
+      "Tout a commencé par un simple bonjour, sous un arbre où les étudiants garaient leurs engins.",
+      "Voici, année après année, le chemin qui nous a menés jusqu'ici."
+    ],
     "items": [
       {
+        "year": "2017",
+        "title": "L'école de droit",
+        "subtitle": "De simples camarades",
+        "description": [
+          "Un bonjour, un sourire échangé sous l'arbre où les étudiants garaient leurs engins. Des instants qui semblaient anodins, mais qui allaient marquer le début de tout.",
+          "C'est par l'intermédiaire d'un ami commun que nous avons vraiment commencé à échanger. Une belle amitié est née ; des discussions, des nouvelles prises régulièrement, une complicité qui s'installait doucement.",
+          "Geovanni partageait ses anciennes épreuves pour aider Stella à préparer ses examens. Nous étions simplement amis. Du moins, c'est ce que nous pensions."
+        ]
+      },
+      {
         "year": "2018",
-        "title": "Notre rencontre",
-        "description": "Tout a commencé par un sourire et une conversation qui n'en finissait pas."
+        "title": "La France",
+        "subtitle": "Des kilomètres entre nous",
+        "description": [
+          "Nos chemins se séparent. Geovanni part pour la France. Malgré la distance et nos nouvelles vies, nous continuons à échanger comme de bons amis."
+        ]
+      },
+      {
+        "year": "2019",
+        "title": "La Tunisie, puis la France",
+        "subtitle": "Jamais vraiment loin",
+        "description": [
+          "Stella s'envole à son tour pour la Tunisie. Puis, vers la fin de l'année, quelque chose change : un peu de flirt par-ci, quelques attentions par-là... et, presque sans nous en rendre compte, notre belle amitié se transforme en histoire d'amour.",
+          "En décembre 2019, nous devenons officiellement un couple. Commence alors une nouvelle aventure : celle d'un amour à distance, avec des kilomètres entre nous, mais une envie grandissante de rester proches."
+        ]
       },
       {
         "year": "2020",
-        "title": "Notre premier voyage",
-        "description": "Un road trip inoubliable qui a scellé notre complicité."
-      },
-      {
-        "year": "2023",
-        "title": "La grande question",
-        "description": "Le début d'un nouveau chapitre, avec la plus belle des questions."
+        "title": "Et si tout était écrit ?",
+        "subtitle": "Réunis sur le même territoire",
+        "description": [
+          "Le destin, après nous avoir séparés, décide finalement de nous réunir : Stella rejoint à son tour la France.",
+          "C'est là que Stella découvre un petit secret plutôt amusant : Geovanni avait toujours eu un faible pour elle, bien avant qu'elle ne s'en doute. Des captures d'écran de ses statuts, soigneusement conservées. Des conversations avec notre ami commun, accompagnées d'un mystérieux « Mme Etekpor »...",
+          "Le plus drôle dans tout ça ? À cette époque, nous n'étions pourtant que de simples amis. Comme quoi, parfois, le cœur sait ce que nous ignorons encore."
+        ]
       },
       {
         "year": "2026",
-        "title": "Notre mariage",
-        "description": "Nous avons hâte de célébrer notre amour avec vous !"
+        "title": "Pour toujours",
+        "subtitle": "Notre plus beau chapitre",
+        "description": [
+          "Des années ont passé depuis ce premier bonjour sous l'arbre. Ce qui n'était au départ qu'une rencontre anodine, puis une belle amitié, est devenu un amour solide, profond et précieux.",
+          "Aujourd'hui, après toutes ces années, nous avons choisi de sceller cet amour et d'écrire ensemble le plus beau chapitre de notre histoire : celui de notre union."
+        ]
       }
+    ],
+    "closing": [
+      "Et si notre histoire a commencé par un simple « bonjour »,",
+      "nous avons aujourd'hui la chance de pouvoir lui donner",
+      "le plus beau des « pour toujours »."
     ]
   },
   "ceremony": {
-    "title": "Cérémonie & Lieu",
-    "subtitle": "Coto de Caza, Californie",
-    "copy": "La cérémonie aura lieu dans un cadre naturel et chaleureux, entourée de jardins, de montagnes douces et de ceux que nous aimons.",
-    "address": "Coto de Caza Golf & Racquet Club",
-    "gps": "33.5945, -117.5867",
-    "maps": "Ouvrir Google Maps"
+    "title": "Cérémonie & Lieux",
+    "subtitle": "Toulouse, France",
+    "copy": "La cérémonie civile aura lieu à 9h00. Le vin d'honneur et la réception commenceront à 16h00. Les informations de lieu et le point GPS de rassemblement seront rappelés dans l'email de confirmation RSVP.",
+    "address": "Mairie de Toulouse",
+    "gps": "Point GPS de rassemblement communiqué par email",
+    "maps": "Ouvrir Google Maps",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Mairie+de+Toulouse"
   },
   "schedule": {
     "title": "Chronologie",
@@ -130,36 +177,36 @@
       {
         "time": "09:00",
         "title": "Cérémonie",
-        "description": "L'échange de nos vœux entourés de nos proches."
+        "description": "Cérémonie civile entourés de nos proches."
       },
       {
         "time": "10:00",
-        "title": "Photos en extérieur",
-        "description": "Un moment pour capturer les premiers souvenirs du jour."
+        "title": "Shooting extérieur",
+        "description": "Un moment pour immortaliser les premiers souvenirs du jour."
       },
       {
         "time": "11:00 - 16:00",
-        "title": "Temps libre",
-        "description": "Une pause pour se détendre avant la suite des festivités."
+        "title": "Temps off",
+        "description": "Une pause pour vous reposer ou découvrir la ville avant la suite."
       },
       {
         "time": "16:00",
-        "title": "Cocktail",
-        "description": "Un moment convivial pour marquer la suite du jour."
+        "title": "Vin d'honneur",
+        "description": "Le rendez-vous convivial pour lancer la suite des festivités."
       },
       {
         "time": "19:00",
         "title": "Réception",
-        "description": "Un dîner raffiné suivi de surprises et de discours."
+        "description": "Un dîner de célébration suivi de surprises et de discours."
       },
       {
         "time": "22:30",
-        "title": "Première danse",
+        "title": "Ouverture de bal",
         "description": "La piste s'ouvre pour célébrer tous ensemble."
       },
       {
         "time": "23:30",
-        "title": "Pièce montée",
+        "title": "Coupure du gâteau",
         "description": "Une dernière douceur avant de continuer la soirée."
       }
     ]
@@ -167,29 +214,35 @@
   "rsvp": {
     "title": "RSVP",
     "subtitle": "Merci de confirmer votre présence",
-    "deadlineLabel": "Merci de répondre avant le",
-    "deadline": "15 JUILLET 2026",
-    "aside": "Nous avons hâte de célébrer avec vous !",
-    "name": "Nom complet",
+    "deadlineLabel": "Date limite de réponse",
+    "deadline": "09 OCTOBRE 2026",
+    "eventLabel": "Informations du mariage",
+    "eventDetails": [
+      "Date : 07 novembre 2026",
+      "Cérémonie civile : 9h00",
+      "Vin d'honneur et réception : 16h00"
+    ],
+    "aside": "Une confirmation automatique vous sera envoyée par email après validation.",
+    "name": "Nom et prénom",
     "email": "Adresse e-mail",
-    "phone": "Téléphone",
-    "attendance": "Serez-vous présent(e) ?",
+    "phone": "Numéro de téléphone",
+    "attendance": "Votre présence",
     "partySize": "Nombre de personnes",
     "message": "Un message pour nous ?",
     "menuChoice": "Choix du menu",
-    "dietary": "Allergies ou régime alimentaire",
+    "dietary": "Restrictions alimentaires ou allergies",
     "submit": "Envoyer ma réponse",
     "submitting": "Envoi en cours...",
     "success": "Merci, votre réponse a bien été enregistrée.",
     "lookupOk": "Nom trouvé dans la liste des invités.",
     "lookupMissing": "Nous ne trouvons pas encore ce nom. Vérifiez l'orthographe de votre invitation.",
-    "lookupIdle": "Votre nom sur l'invitation",
+    "lookupIdle": "Votre nom tel qu'il apparaît sur l'invitation",
     "required": "Veuillez compléter les champs obligatoires.",
     "options": {
-      "ceremony": "Seulement la cérémonie",
-      "reception": "Seulement la réception",
-      "both": "Cérémonie et réception",
-      "decline": "Non, avec regret"
+      "ceremony": "Présent à la cérémonie uniquement",
+      "reception": "Présent à la réception uniquement",
+      "both": "Présent aux deux",
+      "decline": "Absent, avec regret"
     },
     "menus": {
       "menu1": "Menu 1",
@@ -198,148 +251,209 @@
   },
   "dress": {
     "title": "Dress Code",
-    "subtitle": "Black Tie Optional",
-    "copy": "Nous vous invitons à vous habiller élégamment pour célébrer cette journée unique avec nous.",
+    "subtitle": "Noir, beige & terracotta",
+    "copy": "Les couleurs du mariage sont le noir, le beige et le terracotta. Ces tons conviennent aussi bien pour la cérémonie que pour la réception.",
     "forHer": {
       "title": "Pour elles",
-      "copy": "Robes longues ou cocktails élégants."
+      "copy": "Tenues élégantes dans les tons du mariage."
     },
     "forHim": {
       "title": "Pour eux",
-      "copy": "Costume ou smoking."
+      "copy": "Costume ou tenue élégante dans les tons du mariage."
     },
-    "note": "L'important est que vous vous sentiez à l'aise et prêts à faire la fête !",
-    "avoid": "Merci d'éviter le blanc pur et les couleurs néon.",
+    "note": "Il n'est pas obligatoire de prévoir deux tenues différentes pour la cérémonie et la réception.",
+    "avoid": "Merci d'éviter les couleurs en dehors de la palette souhaitée.",
     "swatches": [
       {
-        "name": "Champagne",
-        "hex": "#E6D6BD"
+        "name": "Beige clair",
+        "hex": "#D8D0C2"
+      },
+      {
+        "name": "Beige doré",
+        "hex": "#DCC9A6"
       },
       {
         "name": "Terracotta",
-        "hex": "#C36B47"
+        "hex": "#914F3C"
       },
       {
-        "name": "Sauge",
-        "hex": "#899174"
-      },
-      {
-        "name": "Charbon",
-        "hex": "#2C2824"
+        "name": "Noir",
+        "hex": "#171513"
       }
     ]
   },
   "menu": {
-    "title": "Le Menu",
-    "subtitle": "Un dîner raffiné préparé avec amour",
+    "title": "Menu",
+    "subtitle": "Choix du plat de résistance",
     "menu1": "Menu 1",
     "menu2": "Menu 2",
     "items": {
       "menu1": [
         {
-          "course": "Entrée",
-          "dish": "Carpaccio de Saint-Jacques, agrumes & huile d'olive"
+          "course": "Plat de résistance",
+          "dish": "Menu 1 à sélectionner dans le formulaire RSVP."
         },
         {
-          "course": "Plat",
-          "dish": "Filet de bœuf rôti, légumes de saison & jus au thym"
-        },
-        {
-          "course": "Dessert",
-          "dish": "Pièce montée des mariés & assortiment de douceurs"
-        },
-        {
-          "course": "Vins",
-          "dish": "Sélection de vins fins, blanc & rouge"
+          "course": "Restrictions",
+          "dish": "Merci d'indiquer vos allergies ou restrictions alimentaires dans le formulaire."
         }
       ],
       "menu2": [
         {
-          "course": "Entrée",
-          "dish": "Salade de burrata, tomates anciennes & basilic"
+          "course": "Plat de résistance",
+          "dish": "Menu 2 à sélectionner dans le formulaire RSVP."
         },
         {
-          "course": "Plat",
-          "dish": "Risotto crémeux aux champignons, herbes fraîches"
-        },
-        {
-          "course": "Dessert",
-          "dish": "Tarte fine aux fruits de saison & crème légère"
-        },
-        {
-          "course": "Vins",
-          "dish": "Accord sans alcool ou sélection du domaine"
+          "course": "Restrictions",
+          "dish": "Votre choix apparaîtra dans le tableau de gestion des invités pour les mariés et le traiteur."
         }
       ]
     }
   },
   "gifts": {
     "title": "Liste de Mariage",
-    "subtitle": "Votre présence est notre plus beau cadeau",
-    "copy": "Pour celles et ceux qui souhaitent participer à notre prochain chapitre, une cagnotte simple est disponible.",
-    "cta": "Contribuer via Revolut"
+    "subtitle": "Votre présence est le plus beau des cadeaux",
+    "copy": "Votre présence à nos côtés est le plus beau des cadeaux. Nous n'avons pas de liste de mariage, mais si vous souhaitez nous accompagner dans les premiers pas de cette nouvelle vie à deux, vous pouvez nous offrir une enveloppe virtuelle en cliquant sur le lien ci-dessous. Merci du fond du cœur pour votre générosité. Stella et Geovanni",
+    "cta": "Offrir une enveloppe virtuelle",
+    "url": "https://revolut.me/djorre2zu2/pocket/QefboxXvh0"
   },
   "accommodations": {
     "title": "Hébergements",
     "subtitle": "Nos recommandations",
-    "note": "Nous vous recommandons de réserver à l'avance.",
+    "note": "Cette liste est informative pour vous éviter un travail de recherche. Vous êtes libres de choisir d'autres hôtels ou Airbnb.",
     "maps": "Voir la carte",
     "items": [
       {
-        "name": "The Ranch at Laguna Beach",
-        "distance": "12 min du lieu",
-        "url": "https://www.theranchlb.com"
+        "name": "Hôtel Albert 1er",
+        "description": "Hôtel 3★ au style moderne, réputé pour son petit-déjeuner primé et son accueil chaleureux.",
+        "distance": "À environ 200 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJN6uWRp68rhIRC9VoO58Xhso"
       },
       {
-        "name": "Ayres Hotel & Spa",
-        "distance": "20 min du lieu",
-        "url": "https://www.ayreshotels.com"
+        "name": "Hôtel du Grand Balcon",
+        "description": "Établissement historique, à deux pas de la place du Capitole.",
+        "distance": "À environ 150 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
       },
       {
-        "name": "Laguna Cliffs Marriott",
-        "distance": "25 min du lieu",
-        "url": "https://www.marriott.com"
+        "name": "Hôtel Le Moderne",
+        "description": "Petit hôtel Art Déco, chambres soignées, très bien noté par les voyageurs.",
+        "distance": "À environ 330 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJX1RyQRC9rhIRxxs3Cic5v9E"
+      },
+      {
+        "name": "Hôtel Le Père Léon",
+        "description": "Hôtel avec restaurant français, emplacement central près du métro Esquirol.",
+        "distance": "À environ 440 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJG6EqWp28rhIROX9K9rGFUwQ"
+      },
+      {
+        "name": "Hôtel Mercure Toulouse Centre Wilson Capitole",
+        "description": "Grand hôtel bien situé, parking sur place, proche place du Capitole.",
+        "distance": "À environ 330 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
+      },
+      {
+        "name": "Hôtel Héliot, Cosy Places",
+        "description": "Adresse charmante dans une rue calme, décoration soignée, très appréciée pour son accueil.",
+        "distance": "À environ 510 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJuV_n4Ji8rhIRRQY8BpdNeQs"
+      },
+      {
+        "name": "Novotel Toulouse Centre Wilson",
+        "description": "Grande chaîne bien située, pratique pour un séjour d'affaires ou de tourisme.",
+        "distance": "À environ 230 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+      },
+      {
+        "name": "Hôtel Mercure Toulouse Centre Saint-Georges",
+        "description": "Hôtel 4★ avec piscine, au cœur de la vieille ville.",
+        "distance": "À environ 350 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
+      },
+      {
+        "name": "Ibis Styles Toulouse Centre Capitole",
+        "description": "Emplacement imbattable, sur la place même, très bon rapport qualité-prix.",
+        "distance": "À environ 100 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
+      },
+      {
+        "name": "Alfred Hotels Toulouse Centre Wilson",
+        "description": "Ouvert récemment, très bien noté, chambres cosy et petit-déjeuner apprécié.",
+        "distance": "À environ 520 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJQS5mDJm8rhIRJa5wkZ0b7pE"
       }
     ]
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Une question avant le grand jour ?",
-    "planner": "Wedding Planner",
-    "name": "Arielle Beaumont",
-    "phone": "+1 949 555 0126",
-    "email": "planner@danielle-chris.com",
-    "copy": "Pour toute précision sur l'organisation, les accès ou les demandes particulières, notre équipe vous répondra avec plaisir."
+    "copy": "Pour que les mariés puissent profiter pleinement de leur journée en toute sérénité, nous sommes là pour répondre à toutes vos questions et vous accompagner. En cas du moindre souci, merci de nous contacter directement en appel ou via WhatsApp.",
+    "planners": [
+      {
+        "role": "Wedding planner",
+        "name": "Naomi Atahouet",
+        "phone": "+33 7 54 46 32 52",
+        "email": "ahteventpro@gmail.com"
+      },
+      {
+        "role": "Co wedding planner",
+        "name": "Nadia Bonou",
+        "phone": "+33 7 52 97 42 02",
+        "email": ""
+      }
+    ]
   },
   "faq": {
     "title": "FAQ",
     "subtitle": "Les réponses utiles",
     "items": [
       {
-        "question": "Y aura-t-il un parking sur place ?",
-        "answer": "Oui, un parking invité sera indiqué à l'entrée du lieu. Merci d'arriver quelques minutes en avance."
+        "question": "Est-ce qu'on doit avoir deux tenues différentes pour la cérémonie et la réception ?",
+        "answer": "Non, ce n'est pas obligatoire. Certaines couleurs sont possibles aussi bien pour la cérémonie que pour la réception : #D8D0C2, #DCC9A6 et #914F3C."
       },
       {
-        "question": "Les enfants sont-ils invités ?",
-        "answer": "Nous aimons vos enfants, mais la réception sera principalement réservée aux adultes, sauf mention sur votre invitation."
+        "question": "Si on n'a pas Revolut, est-ce qu'on peut offrir un cadeau matériel ?",
+        "answer": "Le lien de paiement est accessible même si vous n'avez pas Revolut. Si vous rencontrez des difficultés, contactez l'une des deux wedding planners. Les mariés ne souhaitent pas recevoir de cadeaux matériels."
       },
       {
-        "question": "Quel temps prévoir en octobre ?",
-        "answer": "Les journées sont généralement douces et les soirées plus fraîches. Une veste légère est recommandée."
+        "question": "Est-ce qu'on a des réductions dans les hôtels listés ?",
+        "answer": "Malheureusement non, cette liste est informative pour vous éviter un travail de recherche. Vous êtes libres d'aller dans d'autres hôtels ou Airbnb."
       },
       {
-        "question": "Puis-je venir accompagné(e) ?",
-        "answer": "Merci de vous référer au nombre de personnes indiqué sur votre invitation ou dans le formulaire RSVP."
+        "question": "Est-ce que des modalités spécifiques sont prévues pour les enfants ?",
+        "answer": "Le lieu de réception dispose d'une salle dédiée aux enfants. Cependant chaque parent est responsable de son enfant et aucune garde d'enfants n'est prévue."
+      },
+      {
+        "question": "Durant la pause de 11h00 à 16h00, peut-on patienter au lieu de réception ?",
+        "answer": "Le lieu de réception sera en pleins préparatifs pour la soirée et ne pourra malheureusement pas vous accueillir avant 16h00. Nous vous invitons à profiter de cette pause pour vous reposer dans vos logements ou partir à la découverte de la ville."
+      },
+      {
+        "question": "Est-ce que je peux venir accompagné d'un plus-one ?",
+        "answer": "Les invitations sont individuelles et nominatives. Si votre conjoint(e) n'a pas reçu le lien d'accès et le mot de passe du site, cela signifie malheureusement qu'il ou elle n'est pas convié(e). Si vous êtes en couple ou en famille et que chacun a reçu le lien et le mot de passe, merci de vous inscrire individuellement, y compris pour les enfants de 2 ans et plus."
       }
     ]
   },
+  "legal": {
+    "noticeTitle": "Mentions légales",
+    "notice": "Ce site privé est destiné uniquement aux invités du mariage de Stella et Geovanni. Il centralise les informations pratiques et les réponses RSVP liées à l'événement.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacy": "Les données transmises via le formulaire RSVP sont utilisées uniquement pour organiser le mariage : nom, email, téléphone, présence, choix de menu et restrictions alimentaires. Elles ne sont pas revendues ni partagées à des tiers hors besoins d'organisation."
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "follow": "Contact rapide",
+    "legal": "Informations légales",
+    "legalNotice": "Mentions légales",
+    "privacy": "Politique de confidentialité"
+  },
   "bottomCta": {
     "title": "Nous avons hâte de célébrer avec vous !",
-    "copy": "N'oubliez pas de confirmer votre présence.",
+    "copy": "N'oubliez pas de confirmer votre présence avant le 09 octobre 2026.",
     "button": "Répondre au RSVP"
   },
   "admin": {
-    "title": "Admin",
+    "title": "Administration",
     "password": "Mot de passe admin",
     "login": "Se connecter",
     "logout": "Déconnexion",
@@ -349,7 +463,7 @@
     "export": "Exporter CSV",
     "import": "Importer CSV/XLSX",
     "addGuest": "Ajouter un invité",
-    "fullName": "Nom complet",
+    "fullName": "Nom et prénom",
     "email": "Email",
     "phone": "Téléphone",
     "allowedPlusOnes": "Accompagnants autorisés",
