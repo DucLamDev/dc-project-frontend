@@ -1977,11 +1977,18 @@ img {
   transform: rotate(180deg);
 }
 
-.faq-item p {
-  margin: 0;
+.faq-answer {
   padding: 0 1.2rem 1.2rem;
+}
+
+.faq-answer p {
+  margin: 0;
   color: #30394c;
   line-height: 1.7;
+}
+
+.faq-answer p + p {
+  margin-top: 0.8rem;
 }
 
 .legal-section {
@@ -2052,15 +2059,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.cta-flower {
-  position: absolute;
-  left: -2rem;
-  bottom: -1rem;
-  width: 10rem;
-  height: 10rem;
-  color: rgba(195, 107, 71, 0.55);
 }
 
 .site-footer {
@@ -3200,8 +3198,11 @@ th {
     line-height: 1.4;
   }
 
-  .faq-item p {
+  .faq-answer {
     padding: 0 0.9rem 1rem;
+  }
+
+  .faq-answer p {
     font-size: 0.88rem;
     line-height: 1.6;
   }

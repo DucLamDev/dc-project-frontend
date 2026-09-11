@@ -12,7 +12,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
-  Flower2,
   Gift,
   Heart,
   Home,
@@ -568,7 +567,7 @@ function RsvpSection({ t }) {
         })
       });
       const emailWasExpected = ["ceremony", "reception", "both"].includes(form.attendance);
-      const emailFailed = emailWasExpected && ["failed", "skipped"].includes(result.confirmationEmail);
+      const emailFailed = emailWasExpected && result.confirmationEmail === "failed";
       setStatus({
         type: emailFailed ? "warning" : "success",
         message: emailFailed ? t("rsvp.emailFailed") : result.confirmationEmail === "sent" ? t("rsvp.successEmailSent") : t("rsvp.success")
@@ -891,7 +890,13 @@ function FaqSection({ t }) {
                 <span>{item.question}</span>
                 <ChevronDown className={openIndex === index ? "open" : ""} size={20} />
               </button>
-              {openIndex === index && <p>{item.answer}</p>}
+              {openIndex === index && (
+                <div className="faq-answer">
+                  {(Array.isArray(item.answer) ? item.answer : [item.answer]).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -904,7 +909,6 @@ function BottomCta({ scrollTo, t }) {
   return (
     <section className="bottom-cta">
       <div className="bottom-cta-copy">
-        <Flower2 className="cta-flower" strokeWidth={1} />
         <h2>{t("bottomCta.title")}</h2>
         <Divider />
         <p>{t("bottomCta.copy")}</p>

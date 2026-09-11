@@ -405,28 +405,34 @@
     "subtitle": "Questions pratiques",
     "items": [
       {
-        "question": "Faut-il deux tenues ?",
-        "answer": "Non. Une seule tenue peut convenir aux deux moments si elle est dans l'une des teintes communes : #D8D0C2, #DCC9A6 ou #914F3C."
+        "question": "Est-ce qu’on doit avoir deux tenues différentes pour la cérémonie et la réception ?",
+        "answer": "Non, ce n’est pas obligatoire, il y a des couleurs qui sont possibles aussi bien pour la cérémonie que pour la réception, les voici : #D8D0C2 #DCC9A6 #914F3C"
       },
       {
-        "question": "Peut-on offrir un cadeau matériel ?",
-        "answer": "Le lien de paiement Revolut fonctionne sans compte Revolut. En cas de difficulté, contactez l'une des wedding planners ; les mariés ne souhaitent pas recevoir de cadeaux matériels."
+        "question": "Si on n’a pas Revolut est-ce qu’on peut offrir un cadeau matériel ?",
+        "answer": "Lien de paiement est accessible même si vous n’avez pas Revolut. Si vous rencontrez des difficultés, contactez l’une des deux wedding planner. Les mariés ne souhaitent pas avoir des cadeaux matériels."
       },
       {
-        "question": "Y a-t-il des réductions hôtels ?",
-        "answer": "Non. Cette liste est uniquement informative pour faciliter vos recherches ; vous pouvez choisir un autre hôtel ou Airbnb."
+        "question": "Est-ce qu’on a des réductions dans les hôtels listés ?",
+        "answer": "Malheureusement non, cette liste est informative pour vous éviter un travail de recherche. Vous êtes libre d’aller au sein d’autres hôtels et/ou Airbnb."
       },
       {
-        "question": "Les enfants sont-ils prévus ?",
-        "answer": "Le lieu dispose d'une salle dédiée aux enfants, mais aucune garde n'est prévue et chaque parent reste responsable de son enfant."
+        "question": "Est-ce que des modalités spécifiques sont prévues pour les enfants ?",
+        "answer": "Le lieu de réception dispose d’une salle dédiée aux enfants. Cependant chaque parent est responsable de son enfant et aucune garde-d’enfants n’est prévue."
       },
       {
-        "question": "Peut-on attendre au lieu de réception entre 11h et 16h ?",
-        "answer": "Non. Le lieu sera en préparation et ne pourra pas accueillir les invités avant 16h. Profitez de cette pause pour vous reposer ou découvrir Toulouse."
+        "question": "Durant la pause de 11h00 à 16h00 peut-on patienter au lieu de réception ?",
+        "answer": [
+          "Le lieu de réception sera en pleins préparatifs pour la soirée et ne pourra malheureusement pas vous accueillir avant 16h. Ce sera aussi un moment privilégié que les mariés souhaitent s'accorder, juste tous les deux, avant de vous retrouver pour la suite des festivités !",
+          "Nous vous invitons donc à profiter de cette pause pour vous reposer dans vos logements ou partir à la découverte de la ville."
+        ]
       },
       {
-        "question": "Puis-je venir avec un plus-one ?",
-        "answer": "Les invitations sont individuelles et nominatives. Seules les personnes ayant reçu le lien et le mot de passe sont conviées ; chaque invité, y compris les enfants de 2 ans et plus, doit s'inscrire séparément."
+        "question": "Est-ce que je peux venir accompagné d’un plus +1 ?",
+        "answer": [
+          "Les invitations sont individuelles et nominatives, afin que les mariés puissent partager ce moment avec les personnes qui leur tiennent particulièrement à cœur. Si votre conjoint(e) n'a pas reçu le lien d'accès et le mot de passe du site, cela signifie malheureusement qu'il/elle n'est pas convié(e) à l'événement. Merci de votre compréhension et du respect de ce souhait, qui compte beaucoup pour les mariés.",
+          "Si vous êtes en couple ou en famille et que vous avez chacun(e) reçu le lien et le mot de passe, merci de vous inscrire individuellement, y compris pour les enfants de 2 ans et plus."
+        ]
       }
     ]
   },
