@@ -32,6 +32,7 @@
   "hero": {
     "eyebrow": "We are getting married!",
     "names": "STELLA & GEOVANNI",
+    "photoAlt": "Stella and Geovanni",
     "cta": "Discover our wedding",
     "stamp": "07.11.26"
   },
@@ -57,22 +58,22 @@
         "description": "The key moments of the day."
       },
       {
-        "id": "rsvp",
-        "number": "04.",
-        "title": "RSVP",
-        "description": "Reply before 09.10.26."
-      },
-      {
         "id": "dress",
-        "number": "05.",
+        "number": "04.",
         "title": "Dress Code",
-        "description": "Black, beige and terracotta."
+        "description": "Two palettes for ceremony and reception."
       },
       {
         "id": "menu",
-        "number": "06.",
+        "number": "05.",
         "title": "Menu",
-        "description": "Choose your menu in RSVP."
+        "description": "Dinner details for the reception."
+      },
+      {
+        "id": "rsvp",
+        "number": "06.",
+        "title": "RSVP",
+        "description": "Reply before 09.10.26."
       },
       {
         "id": "gifts",
@@ -103,43 +104,44 @@
   "story": {
     "title": "Our Story",
     "subtitle": "From a hello to forever",
+    "photoAlt": "Stella and Geovanni, photo {{number}}",
     "intro": [
-      "It began with a simple hello, then friendship slowly became obvious."
+      "It all began with a simple hello beneath the students' tree. Year after year, that friendship led us here."
     ],
     "items": [
       {
         "year": "2017",
         "title": "Law school",
-        "subtitle": "The first hello",
-        "description": "A smile under the students' tree, then conversations that kept coming back."
+        "subtitle": "Just classmates",
+        "description": "A hello, a smile, then conversations through a mutual friend. A quiet friendship began."
       },
       {
         "year": "2018",
         "title": "France",
         "subtitle": "Miles apart",
-        "description": "Geovanni moved to France. Distance arrived, but the bond stayed."
+        "description": "Geovanni moved to France. Despite the distance and our new lives, we stayed close."
       },
       {
         "year": "2019",
         "title": "Tunisia, then France",
-        "subtitle": "Never really far",
-        "description": "By the end of the year, our friendship had become a love story."
+        "subtitle": "Never really far apart",
+        "description": "By December, the friendship we treasured had quietly become a long-distance love story."
       },
       {
         "year": "2020",
-        "title": "Together",
-        "subtitle": "On the same soil",
-        "description": "Stella joined France. A new life together began."
+        "title": "Together in France",
+        "subtitle": "What if it was written?",
+        "description": "Stella joined Geovanni in France and discovered he had cared for her long before she knew."
       },
       {
         "year": "2026",
         "title": "Forever",
-        "subtitle": "Our wedding",
-        "description": "We are writing this new chapter surrounded by the people we love."
+        "subtitle": "Our most beautiful chapter",
+        "description": "Years after that first hello, we are choosing each other and celebrating our union with you."
       }
     ],
     "closing": [
-      "Thank you for being part of our story."
+      "A story that began with hello now has its most beautiful forever."
     ]
   },
   "ceremony": {
@@ -162,7 +164,7 @@
       },
       {
         "time": "10:00",
-        "title": "Outdoor photos",
+        "title": "Photos",
         "description": "Couple photos."
       },
       {
@@ -208,13 +210,14 @@
     "email": "Email address",
     "phone": "Phone",
     "attendance": "Your attendance",
-    "partySize": "Number of guests",
     "message": "A message for us?",
-    "menuChoice": "Menu choice",
     "dietary": "Dietary restrictions",
     "submit": "Send my response",
     "submitting": "Sending...",
     "success": "Thank you, your response has been saved.",
+    "successEmailSent": "Thank you, your response has been saved and the confirmation email has been sent.",
+    "emailFailed": "Your response was saved, but the confirmation email could not be sent. Please contact the wedding planner if needed.",
+    "timeout": "The server is taking too long to respond. Check your connection and the admin page before trying again.",
     "lookupOk": "Name found on the guest list.",
     "lookupMissing": "We cannot find this name yet. Please check the spelling on your invitation.",
     "lookupIdle": "Your name on the invitation",
@@ -224,71 +227,86 @@
       "reception": "Reception only",
       "both": "Ceremony and reception",
       "decline": "Unable to attend"
-    },
-    "menus": {
-      "menu1": "Menu 1",
-      "menu2": "Menu 2"
     }
   },
   "dress": {
     "title": "Dress Code",
-    "subtitle": "Black Tie Optional",
-    "copy": "We invite you to dress elegantly in the wedding color palette.",
-    "forHer": {
-      "title": "For her",
-      "copy": "Long or cocktail dress."
-    },
-    "forHim": {
-      "title": "For him",
-      "copy": "Suit or tuxedo."
-    },
-    "note": "One outfit is enough for the whole day.",
-    "avoid": "Preferred palette: black, beige, terracotta.",
-    "swatches": [
+    "subtitle": "Ceremony & Reception",
+    "copy": "Two moments, two coordinated palettes. Please choose an elegant outfit in the exact shades below.",
+    "paletteLabel": "Approved color palette",
+    "inspiration": "Outfit inspiration",
+    "forHer": "For her",
+    "forHim": "For him",
+    "menOnly": "Men only",
+    "imageAlt": "{{group}} outfit inspiration {{number}}",
+    "sharedNote": "One outfit can be worn all day when it is in #D8D0C2, #DCC9A6 or #914F3C.",
+    "periods": [
       {
-        "name": "Light beige",
-        "hex": "#D8D0C2"
+        "id": "morning",
+        "number": "01",
+        "time": "Morning · Town Hall",
+        "title": "Ceremony Dress Code",
+        "copy": "Refined neutrals, warm brown and terracotta for the civil ceremony.",
+        "colors": [
+          { "hex": "#000000", "menOnly": true },
+          { "hex": "#D8D0C2" },
+          { "hex": "#DCC9A6" },
+          { "hex": "#45271D" },
+          { "hex": "#914F3C" }
+        ],
+        "rules": [
+          { "type": "required", "text": "A tie or bow tie is required for men at the town hall." },
+          { "type": "avoid", "text": "Black outfits are not allowed for women." }
+        ]
       },
       {
-        "name": "Golden beige",
-        "hex": "#DCC9A6"
-      },
-      {
-        "name": "Terracotta",
-        "hex": "#914F3C"
-      },
-      {
-        "name": "Black",
-        "hex": "#171513"
+        "id": "evening",
+        "number": "02",
+        "time": "Evening · Reception",
+        "title": "Reception Dress Code",
+        "copy": "Terracotta, caramel and soft beige tones for the evening celebration.",
+        "colors": [
+          { "hex": "#914F3C" },
+          { "hex": "#AD845E" },
+          { "hex": "#9A6B45" },
+          { "hex": "#DCC9A6" },
+          { "hex": "#D8D0C2" }
+        ],
+        "rules": []
       }
     ]
   },
   "menu": {
     "title": "The Menu",
-    "subtitle": "Your choice for the reception",
+    "subtitle": "A single menu for everyone",
     "items": [
       {
-        "course": "Menu 1",
-        "dish": "Choose it in the RSVP form."
+        "course": "Starter",
+        "dish": "Creamy burrata, heirloom tomatoes, homemade pesto, arugula and pine nuts."
       },
       {
-        "course": "Menu 2",
-        "dish": "Choose it in the RSVP form."
+        "course": "Main",
+        "dish": "Lamb shanks, olive-oil mashed potatoes, glazed vegetables and reduced sauce."
       },
       {
-        "course": "Allergies",
-        "dish": "Please share dietary restrictions."
+        "course": "Dessert",
+        "dish": "The couple's wedding cake and an assortment of sweets."
       },
       {
-        "course": "RSVP",
-        "dish": "Your choice will be sent to the team."
+        "course": "Wines",
+        "dish": "A selection of fine white and red wines."
       }
-    ]
+    ],
+    "note": "Please share any dietary restrictions in the RSVP form."
   },
   "gifts": {
     "title": "Wedding Registry",
     "subtitle": "Your presence is our greatest gift",
-    "copy": "We do not wish to receive material gifts. A virtual envelope is available for anyone who would like to support our new life together.",
+    "copy": [
+      "Your presence by our side is the most beautiful gift of all. We do not have a wedding registry, but if you would like to support the first steps of our new life together, you can offer us a virtual envelope through the link below.",
+      "Thank you from the bottom of our hearts for your generosity."
+    ],
+    "signature": "Stella & Geovanni",
     "cta": "Offer an envelope",
     "url": "https://revolut.me/djorre2zu2/pocket/QefboxXvh0"
   },
@@ -297,65 +315,67 @@
     "subtitle": "Our recommendations",
     "note": "We recommend booking in advance.",
     "maps": "View map",
+    "previous": "Previous accommodations",
+    "next": "Next accommodations",
     "items": [
       {
-        "name": "Ibis Styles Capitole",
-        "description": "Very central, on Place du Capitole.",
-        "distance": "100 m away.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
-      },
-      {
-        "name": "Hôtel du Grand Balcon",
-        "description": "Historic address near the Capitole.",
-        "distance": "150 m away.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
-      },
-      {
         "name": "Hôtel Albert 1er",
-        "description": "Modern and well-located hotel.",
-        "distance": "200 m away.",
+        "description": "Modern 3-star hotel known for its award-winning breakfast and warm welcome.",
+        "distance": "About 200 m from the town hall.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJN6uWRp68rhIRC9VoO58Xhso"
       },
       {
-        "name": "Novotel Centre Wilson",
-        "description": "Practical central stay.",
-        "distance": "230 m away.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+        "name": "Hôtel du Grand Balcon",
+        "description": "Historic hotel where Saint-Exupéry once stayed, steps from Place du Capitole.",
+        "distance": "About 150 m from the town hall.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
       },
       {
         "name": "Hôtel Le Moderne",
-        "description": "Small Art Deco hotel.",
-        "distance": "330 m away.",
+        "description": "Small Art Deco hotel with well-appointed rooms, highly rated by travelers.",
+        "distance": "About 330 m from the town hall.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJX1RyQRC9rhIRxxs3Cic5v9E"
       },
       {
-        "name": "Mercure Wilson Capitole",
-        "description": "Large hotel with parking.",
-        "distance": "330 m away.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
-      },
-      {
-        "name": "Mercure Saint-Georges",
-        "description": "4-star hotel with a pool.",
-        "distance": "350 m away.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
-      },
-      {
         "name": "Hôtel Le Père Léon",
-        "description": "Central, near Esquirol.",
-        "distance": "440 m away.",
+        "description": "Central hotel with a French restaurant, near Esquirol metro station.",
+        "distance": "About 440 m from the town hall.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJG6EqWp28rhIROX9K9rGFUwQ"
       },
       {
-        "name": "Hôtel Héliot",
-        "description": "Quiet and cosy address.",
-        "distance": "510 m away.",
+        "name": "Hôtel Mercure Toulouse Centre Wilson Capitole",
+        "description": "Large, well-located hotel with on-site parking, close to Place du Capitole.",
+        "distance": "About 330 m from the town hall.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
+      },
+      {
+        "name": "Hôtel Héliot, Cosy Places",
+        "description": "Charming address on a quiet street, praised for its tasteful decor and warm welcome.",
+        "distance": "About 510 m from the town hall.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJuV_n4Ji8rhIRRQY8BpdNeQs"
       },
       {
-        "name": "Alfred Hotels Wilson",
-        "description": "Cosy rooms.",
-        "distance": "520 m away.",
+        "name": "Novotel Toulouse Centre Wilson",
+        "description": "Well-located major hotel, convenient for business or leisure stays.",
+        "distance": "About 230 m from the town hall.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+      },
+      {
+        "name": "Hôtel Mercure Toulouse Centre Saint-Georges",
+        "description": "4-star hotel with a pool in the heart of the old town.",
+        "distance": "About 350 m from the town hall.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
+      },
+      {
+        "name": "Ibis Styles Toulouse Centre Capitole",
+        "description": "An unbeatable location right on the square with excellent value for money.",
+        "distance": "About 100 m from the town hall.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
+      },
+      {
+        "name": "Alfred Hotels Toulouse Centre Wilson",
+        "description": "Recently opened and highly rated, with cozy rooms and a well-liked breakfast.",
+        "distance": "About 520 m from the town hall.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJQS5mDJm8rhIRJa5wkZ0b7pE"
       }
     ]
@@ -363,7 +383,8 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Need help?",
-    "copy": "For any question before or during the wedding, please contact our wedding planners directly.",
+    "whatsapp": "WhatsApp",
+    "copy": "So the couple can enjoy their day with complete peace of mind, our wedding planners are available for any question. Please contact them directly by phone or WhatsApp before or during the wedding.",
     "planners": [
       {
         "role": "Wedding planner",
@@ -385,27 +406,27 @@
     "items": [
       {
         "question": "Do we need two outfits?",
-        "answer": "No. One outfit in the wedding palette works for the whole day."
+        "answer": "No. One outfit can work for both moments if it is in one of the shared shades: #D8D0C2, #DCC9A6 or #914F3C."
       },
       {
         "question": "Can we offer a physical gift?",
-        "answer": "The couple prefers a virtual envelope. The Revolut link works even without an account."
+        "answer": "The Revolut payment link works without a Revolut account. If you have difficulty, contact one of the wedding planners; the couple does not wish to receive material gifts."
       },
       {
         "question": "Are there hotel discounts?",
-        "answer": "No, the list is only a helpful suggestion. You may choose any hotel or Airbnb."
+        "answer": "No. The list is provided only to save you some research, and you are free to choose another hotel or Airbnb."
       },
       {
         "question": "Are children planned for?",
-        "answer": "A children's room is available, without childcare service."
+        "answer": "The reception venue has a room for children, but no childcare is provided and each parent remains responsible for their child."
       },
       {
         "question": "Can we wait at the reception venue from 11 AM to 4 PM?",
-        "answer": "No, the venue will be prepared. Please use the break to rest or visit Toulouse."
+        "answer": "No. The venue will be prepared for the evening and cannot welcome guests before 4 PM. Please use the break to rest or explore Toulouse."
       },
       {
         "question": "Can I bring a plus-one?",
-        "answer": "Invitations are nominative. Thank you for respecting the invitations received."
+        "answer": "Invitations are individual and nominative. Only guests who received the access link and password are invited; each invited person, including children aged 2 and over, should register separately."
       }
     ]
   },
@@ -437,11 +458,25 @@
     "responses": "Responses",
     "export": "Export CSV",
     "import": "Import CSV/XLSX",
+    "importFailed": "Import failed. Please check the file and try again.",
     "addGuest": "Add guest",
     "fullName": "Full name",
     "email": "Email",
     "phone": "Phone",
     "allowedPlusOnes": "Allowed plus-ones",
-    "status": "Status"
+    "status": "Status",
+    "delete": "Delete",
+    "empty": "No data",
+    "statLabels": {
+      "attending": "Attending",
+      "declined": "Declined",
+      "pending": "Pending"
+    },
+    "attendanceLabels": {
+      "ceremony": "Ceremony only",
+      "reception": "Reception only",
+      "both": "Ceremony and reception",
+      "decline": "Unable to attend"
+    }
   }
 }

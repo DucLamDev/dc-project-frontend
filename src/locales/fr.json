@@ -32,6 +32,7 @@
   "hero": {
     "eyebrow": "Nous nous marions !",
     "names": "STELLA & GEOVANNI",
+    "photoAlt": "Stella et Geovanni",
     "cta": "Découvrir notre mariage",
     "stamp": "07.11.26"
   },
@@ -57,22 +58,22 @@
         "description": "Les temps forts de la journée."
       },
       {
-        "id": "rsvp",
-        "number": "04.",
-        "title": "RSVP",
-        "description": "Réponse avant le 09.10.26."
-      },
-      {
         "id": "dress",
-        "number": "05.",
+        "number": "04.",
         "title": "Dress Code",
-        "description": "Noir, beige et terracotta."
+        "description": "Deux palettes pour la cérémonie et la réception."
       },
       {
         "id": "menu",
-        "number": "06.",
+        "number": "05.",
         "title": "Menu",
-        "description": "Choix à indiquer dans le RSVP."
+        "description": "Le dîner de la réception."
+      },
+      {
+        "id": "rsvp",
+        "number": "06.",
+        "title": "RSVP",
+        "description": "Réponse avant le 09.10.26."
       },
       {
         "id": "gifts",
@@ -103,43 +104,44 @@
   "story": {
     "title": "Notre Histoire",
     "subtitle": "D'un bonjour à un pour toujours",
+    "photoAlt": "Stella et Geovanni, photo {{number}}",
     "intro": [
-      "Tout a commencé par un simple bonjour, puis l'amitié est devenue une évidence."
+      "Tout a commencé par un simple bonjour sous l'arbre des étudiants. Année après année, cette amitié nous a menés jusqu'ici."
     ],
     "items": [
       {
         "year": "2017",
         "title": "L'école de droit",
-        "subtitle": "Le premier bonjour",
-        "description": "Un sourire sous l'arbre des étudiants, puis des échanges qui reviennent souvent."
+        "subtitle": "De simples camarades",
+        "description": "Un bonjour, un sourire, puis des échanges grâce à un ami commun. Une belle amitié est née."
       },
       {
         "year": "2018",
         "title": "La France",
         "subtitle": "Des kilomètres entre nous",
-        "description": "Geovanni part en France. La distance arrive, mais le lien reste."
+        "description": "Geovanni part en France. Malgré la distance et nos nouvelles vies, nous restons proches."
       },
       {
         "year": "2019",
         "title": "Tunisie puis France",
         "subtitle": "Jamais vraiment loin",
-        "description": "À la fin de l'année, notre amitié devient une histoire d'amour."
+        "description": "En décembre, notre précieuse amitié devient doucement une histoire d'amour à distance."
       },
       {
         "year": "2020",
-        "title": "Réunis",
-        "subtitle": "Le même territoire",
-        "description": "Stella rejoint la France. Une nouvelle vie à deux commence."
+        "title": "Réunis en France",
+        "subtitle": "Et si tout était écrit ?",
+        "description": "Stella rejoint Geovanni en France et découvre qu'il avait un faible pour elle bien avant qu'elle ne le sache."
       },
       {
         "year": "2026",
         "title": "Pour toujours",
-        "subtitle": "Notre mariage",
-        "description": "Nous écrivons ce nouveau chapitre entourés de ceux que nous aimons."
+        "subtitle": "Notre plus beau chapitre",
+        "description": "Des années après ce premier bonjour, nous choisissons de célébrer notre union avec vous."
       }
     ],
     "closing": [
-      "Merci de faire partie de notre histoire."
+      "Une histoire commencée par un bonjour trouve aujourd'hui son plus beau pour toujours."
     ]
   },
   "ceremony": {
@@ -162,7 +164,7 @@
       },
       {
         "time": "10:00",
-        "title": "Photos extérieur",
+        "title": "Photos",
         "description": "Photos des mariés."
       },
       {
@@ -208,13 +210,14 @@
     "email": "Adresse e-mail",
     "phone": "Téléphone",
     "attendance": "Votre présence",
-    "partySize": "Nombre de personnes",
     "message": "Un message pour nous ?",
-    "menuChoice": "Choix du menu",
     "dietary": "Restrictions alimentaires",
     "submit": "Envoyer ma réponse",
     "submitting": "Envoi en cours...",
     "success": "Merci, votre réponse a bien été enregistrée.",
+    "successEmailSent": "Merci, votre réponse a été enregistrée et l'e-mail de confirmation a été envoyé.",
+    "emailFailed": "Votre réponse est bien enregistrée, mais l'e-mail de confirmation n'a pas pu être envoyé. Merci de contacter la wedding planner si nécessaire.",
+    "timeout": "Le serveur met trop de temps à répondre. Vérifiez votre connexion et consultez l'administration avant de réessayer.",
     "lookupOk": "Nom trouvé dans la liste des invités.",
     "lookupMissing": "Nous ne trouvons pas encore ce nom. Vérifiez l'orthographe de votre invitation.",
     "lookupIdle": "Votre nom sur l'invitation",
@@ -224,71 +227,86 @@
       "reception": "Réception uniquement",
       "both": "Cérémonie et réception",
       "decline": "Absent, avec regret"
-    },
-    "menus": {
-      "menu1": "Menu 1",
-      "menu2": "Menu 2"
     }
   },
   "dress": {
     "title": "Dress Code",
-    "subtitle": "Black Tie Optional",
-    "copy": "Nous vous invitons à vous habiller élégamment dans les tons du mariage.",
-    "forHer": {
-      "title": "Pour elles",
-      "copy": "Robe longue ou cocktail."
-    },
-    "forHim": {
-      "title": "Pour eux",
-      "copy": "Costume ou smoking."
-    },
-    "note": "Une seule tenue suffit pour toute la journée.",
-    "avoid": "Palette souhaitée : noir, beige, terracotta.",
-    "swatches": [
+    "subtitle": "Cérémonie & Réception",
+    "copy": "Deux moments, deux palettes coordonnées. Merci de choisir une tenue élégante dans les teintes exactes ci-dessous.",
+    "paletteLabel": "Palette de couleurs autorisée",
+    "inspiration": "Inspirations de tenues",
+    "forHer": "Pour elles",
+    "forHim": "Pour eux",
+    "menOnly": "Hommes uniquement",
+    "imageAlt": "Inspiration {{group}} {{number}}",
+    "sharedNote": "Une seule tenue peut convenir à toute la journée si elle est en #D8D0C2, #DCC9A6 ou #914F3C.",
+    "periods": [
       {
-        "name": "Beige clair",
-        "hex": "#D8D0C2"
+        "id": "morning",
+        "number": "01",
+        "time": "Matin · Mairie",
+        "title": "Dress code de la cérémonie",
+        "copy": "Des tons neutres raffinés, brun chaud et terracotta pour la cérémonie civile.",
+        "colors": [
+          { "hex": "#000000", "menOnly": true },
+          { "hex": "#D8D0C2" },
+          { "hex": "#DCC9A6" },
+          { "hex": "#45271D" },
+          { "hex": "#914F3C" }
+        ],
+        "rules": [
+          { "type": "required", "text": "Cravate ou nœud papillon exigé pour les hommes à la mairie." },
+          { "type": "avoid", "text": "Les tenues noires ne sont pas autorisées pour les femmes." }
+        ]
       },
       {
-        "name": "Beige doré",
-        "hex": "#DCC9A6"
-      },
-      {
-        "name": "Terracotta",
-        "hex": "#914F3C"
-      },
-      {
-        "name": "Noir",
-        "hex": "#171513"
+        "id": "evening",
+        "number": "02",
+        "time": "Soir · Réception",
+        "title": "Dress code de la réception",
+        "copy": "Des tons terracotta, caramel et beige doux pour la célébration du soir.",
+        "colors": [
+          { "hex": "#914F3C" },
+          { "hex": "#AD845E" },
+          { "hex": "#9A6B45" },
+          { "hex": "#DCC9A6" },
+          { "hex": "#D8D0C2" }
+        ],
+        "rules": []
       }
     ]
   },
   "menu": {
     "title": "Le Menu",
-    "subtitle": "Votre choix pour la réception",
+    "subtitle": "Un menu unique pour tous",
     "items": [
       {
-        "course": "Menu 1",
-        "dish": "À choisir dans le formulaire RSVP."
+        "course": "Entrée",
+        "dish": "Burrata crémeuse, tomates anciennes, pesto maison, roquette et pignons de pin."
       },
       {
-        "course": "Menu 2",
-        "dish": "À choisir dans le formulaire RSVP."
+        "course": "Plat",
+        "dish": "Souris d'agneau, purée de pommes de terre à l'huile d'olive, légumes glacés et jus réduit."
       },
       {
-        "course": "Allergies",
-        "dish": "Merci de préciser vos restrictions."
+        "course": "Dessert",
+        "dish": "Pièce montée des mariés et assortiment de douceurs."
       },
       {
-        "course": "RSVP",
-        "dish": "Le choix sera transmis à l'organisation."
+        "course": "Vins",
+        "dish": "Une sélection de vins fins, blancs et rouges."
       }
-    ]
+    ],
+    "note": "Merci d'indiquer vos éventuelles restrictions alimentaires dans le formulaire RSVP."
   },
   "gifts": {
     "title": "Liste de Mariage",
     "subtitle": "Votre présence est notre plus beau cadeau",
-    "copy": "Nous ne souhaitons pas de cadeaux matériels. Une enveloppe virtuelle est disponible pour ceux qui veulent nous accompagner dans cette nouvelle vie à deux.",
+    "copy": [
+      "Votre présence à nos côtés est le plus beau des cadeaux. Nous n'avons pas de liste de mariage, mais si vous souhaitez nous accompagner dans les premiers pas de cette nouvelle vie à deux, vous pouvez nous offrir une enveloppe virtuelle via le lien ci-dessous.",
+      "Merci du fond du cœur pour votre générosité."
+    ],
+    "signature": "Stella & Geovanni",
     "cta": "Offrir une enveloppe",
     "url": "https://revolut.me/djorre2zu2/pocket/QefboxXvh0"
   },
@@ -297,65 +315,67 @@
     "subtitle": "Nos recommandations",
     "note": "Nous vous recommandons de réserver à l'avance.",
     "maps": "Voir la carte",
+    "previous": "Hébergements précédents",
+    "next": "Hébergements suivants",
     "items": [
       {
-        "name": "Ibis Styles Capitole",
-        "description": "Très central, sur la place du Capitole.",
-        "distance": "À 100 m.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
-      },
-      {
-        "name": "Hôtel du Grand Balcon",
-        "description": "Adresse historique près du Capitole.",
-        "distance": "À 150 m.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
-      },
-      {
         "name": "Hôtel Albert 1er",
-        "description": "Hôtel moderne et bien situé.",
-        "distance": "À 200 m.",
+        "description": "Hôtel 3★ au style moderne, réputé pour son petit-déjeuner primé et son accueil chaleureux.",
+        "distance": "À environ 200 m de la mairie.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJN6uWRp68rhIRC9VoO58Xhso"
       },
       {
-        "name": "Novotel Centre Wilson",
-        "description": "Pratique pour un séjour central.",
-        "distance": "À 230 m.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+        "name": "Hôtel du Grand Balcon",
+        "description": "Établissement historique où séjourna Saint-Exupéry, à deux pas de la place du Capitole.",
+        "distance": "À environ 150 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJlcaC82G7rhIReRrHh9f3NiQ"
       },
       {
         "name": "Hôtel Le Moderne",
-        "description": "Petit hôtel Art Déco.",
-        "distance": "À 330 m.",
+        "description": "Petit hôtel Art Déco aux chambres soignées, très bien noté par les voyageurs.",
+        "distance": "À environ 330 m de la mairie.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJX1RyQRC9rhIRxxs3Cic5v9E"
       },
       {
-        "name": "Mercure Wilson Capitole",
-        "description": "Grand hôtel avec parking.",
-        "distance": "À 330 m.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
-      },
-      {
-        "name": "Mercure Saint-Georges",
-        "description": "Hôtel 4★ avec piscine.",
-        "distance": "À 350 m.",
-        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
-      },
-      {
         "name": "Hôtel Le Père Léon",
-        "description": "Central, près d'Esquirol.",
-        "distance": "À 440 m.",
+        "description": "Hôtel avec restaurant français, idéalement situé près du métro Esquirol.",
+        "distance": "À environ 440 m de la mairie.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJG6EqWp28rhIROX9K9rGFUwQ"
       },
       {
-        "name": "Hôtel Héliot",
-        "description": "Adresse calme et cosy.",
-        "distance": "À 510 m.",
+        "name": "Hôtel Mercure Toulouse Centre Wilson Capitole",
+        "description": "Grand hôtel bien situé, avec parking sur place, proche de la place du Capitole.",
+        "distance": "À environ 330 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJh7IYU5m8rhIRXGlRZrTXGYM"
+      },
+      {
+        "name": "Hôtel Héliot, Cosy Places",
+        "description": "Adresse charmante dans une rue calme, à la décoration soignée et appréciée pour son accueil.",
+        "distance": "À environ 510 m de la mairie.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJuV_n4Ji8rhIRRQY8BpdNeQs"
       },
       {
-        "name": "Alfred Hotels Wilson",
-        "description": "Chambres cosy.",
-        "distance": "À 520 m.",
+        "name": "Novotel Toulouse Centre Wilson",
+        "description": "Grande chaîne bien située, pratique pour un séjour d'affaires ou de tourisme.",
+        "distance": "À environ 230 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJ6-iFB568rhIRy4fTtJE5zpE"
+      },
+      {
+        "name": "Hôtel Mercure Toulouse Centre Saint-Georges",
+        "description": "Hôtel 4★ avec piscine, au cœur de la vieille ville.",
+        "distance": "À environ 350 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJldR79Zu8rhIR_3cMkqZQoY8"
+      },
+      {
+        "name": "Ibis Styles Toulouse Centre Capitole",
+        "description": "Emplacement imbattable sur la place même, avec un très bon rapport qualité-prix.",
+        "distance": "À environ 100 m de la mairie.",
+        "url": "https://www.google.com/maps/place/?q=place_id:ChIJne6g8GG7rhIRJ5_XAOee1Ps"
+      },
+      {
+        "name": "Alfred Hotels Toulouse Centre Wilson",
+        "description": "Ouvert récemment, très bien noté, avec des chambres cosy et un petit-déjeuner apprécié.",
+        "distance": "À environ 520 m de la mairie.",
         "url": "https://www.google.com/maps/place/?q=place_id:ChIJQS5mDJm8rhIRJa5wkZ0b7pE"
       }
     ]
@@ -363,7 +383,8 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Besoin d'aide ?",
-    "copy": "Pour toute question avant ou pendant le mariage, contactez directement nos wedding planners.",
+    "whatsapp": "WhatsApp",
+    "copy": "Pour que les mariés profitent pleinement de leur journée, nos wedding planners répondent à toutes vos questions. Contactez-les directement par téléphone ou WhatsApp avant ou pendant le mariage.",
     "planners": [
       {
         "role": "Wedding planner",
@@ -385,27 +406,27 @@
     "items": [
       {
         "question": "Faut-il deux tenues ?",
-        "answer": "Non. Une tenue dans la palette du mariage convient pour toute la journée."
+        "answer": "Non. Une seule tenue peut convenir aux deux moments si elle est dans l'une des teintes communes : #D8D0C2, #DCC9A6 ou #914F3C."
       },
       {
         "question": "Peut-on offrir un cadeau matériel ?",
-        "answer": "Les mariés préfèrent une enveloppe virtuelle. Le lien Revolut fonctionne même sans compte."
+        "answer": "Le lien de paiement Revolut fonctionne sans compte Revolut. En cas de difficulté, contactez l'une des wedding planners ; les mariés ne souhaitent pas recevoir de cadeaux matériels."
       },
       {
         "question": "Y a-t-il des réductions hôtels ?",
-        "answer": "Non, la liste est indicative. Vous pouvez choisir un autre hôtel ou Airbnb."
+        "answer": "Non. Cette liste est uniquement informative pour faciliter vos recherches ; vous pouvez choisir un autre hôtel ou Airbnb."
       },
       {
         "question": "Les enfants sont-ils prévus ?",
-        "answer": "Une salle enfants est prévue, sans service de garde."
+        "answer": "Le lieu dispose d'une salle dédiée aux enfants, mais aucune garde n'est prévue et chaque parent reste responsable de son enfant."
       },
       {
         "question": "Peut-on attendre au lieu de réception entre 11h et 16h ?",
-        "answer": "Non, le lieu sera en préparation. Profitez de la pause pour vous reposer ou visiter Toulouse."
+        "answer": "Non. Le lieu sera en préparation et ne pourra pas accueillir les invités avant 16h. Profitez de cette pause pour vous reposer ou découvrir Toulouse."
       },
       {
         "question": "Puis-je venir avec un plus-one ?",
-        "answer": "Les invitations sont nominatives. Merci de respecter les invitations reçues."
+        "answer": "Les invitations sont individuelles et nominatives. Seules les personnes ayant reçu le lien et le mot de passe sont conviées ; chaque invité, y compris les enfants de 2 ans et plus, doit s'inscrire séparément."
       }
     ]
   },
@@ -437,11 +458,25 @@
     "responses": "Réponses",
     "export": "Exporter CSV",
     "import": "Importer CSV/XLSX",
+    "importFailed": "Import impossible. Vérifiez le fichier et réessayez.",
     "addGuest": "Ajouter un invité",
     "fullName": "Nom et prénom",
     "email": "Email",
     "phone": "Téléphone",
     "allowedPlusOnes": "Accompagnants autorisés",
-    "status": "Statut"
+    "status": "Statut",
+    "delete": "Supprimer",
+    "empty": "Aucune donnée",
+    "statLabels": {
+      "attending": "Présents",
+      "declined": "Absents",
+      "pending": "En attente"
+    },
+    "attendanceLabels": {
+      "ceremony": "Cérémonie uniquement",
+      "reception": "Réception uniquement",
+      "both": "Cérémonie et réception",
+      "decline": "Absent"
+    }
   }
 }

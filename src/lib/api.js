@@ -1,15 +1,34 @@
 const apiBase = import.meta.env.VITE_API_URL || "";
 
 export async function apiRequest(path, options = {}) {
-  const token = window.localStorage.getItem("wedding_admin_token");
-  const response = await fetch(`${apiBase}/api${path}`, {
-    ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...(options.headers || {})
+  const { timeout = 30000, headers = {}, ...requestOptions } = options;
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), timeout);
+  const token = path.startsWith("/admin/") ? window.localStorage.getItem("wedding_admin_token") : "";
+  let response;
+
+  try {
+    response = await fetch(`${apiBase}/api${path}`, {
+      ...requestOptions,
+      signal: controller.signal,
+      headers: {
+        Accept: "application/json",
+        ...(requestOptions.body ? { "Content-Type": "application/json" } : {}),
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        ...headers
+      }
+    });
+  } catch (error) {
+    if (error.name === "AbortError") {
+      const timeoutError = new Error("REQUEST_TIMEOUT");
+      timeoutError.code = "REQUEST_TIMEOUT";
+      throw timeoutError;
     }
-  });
+
+    throw error;
+  } finally {
+    window.clearTimeout(timeoutId);
+  }
 
   const contentType = response.headers.get("content-type");
   const isJson = contentType?.includes("application/json");

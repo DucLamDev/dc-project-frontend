@@ -1,12 +1,16 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ArrowRight,
+  Ban,
   Building2,
+  Cake,
   CalendarDays,
   Camera,
   CheckCircle2,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Download,
   Flower2,
   Gift,
@@ -14,17 +18,20 @@ import {
   Home,
   Hotel,
   Images,
+  Landmark,
   LockKeyhole,
+  LoaderCircle,
   LogOut,
   Mail,
   MailCheck,
-  MapPin,
   Menu as MenuIcon,
   MessageCircle,
+  Moon,
   Phone,
   Plus,
   Shirt,
   Sparkles,
+  SunMedium,
   Trash2,
   Upload,
   UtensilsCrossed,
@@ -37,25 +44,44 @@ const navItems = [
   { id: "home", icon: Home },
   { id: "story", icon: Images },
   { id: "schedule", icon: CalendarDays },
-  { id: "rsvp", icon: MailCheck },
   { id: "dress", icon: Shirt },
   { id: "menu", icon: UtensilsCrossed },
+  { id: "rsvp", icon: MailCheck },
   { id: "gifts", icon: Gift },
   { id: "accommodations", icon: Hotel },
   { id: "contact", icon: Phone },
   { id: "faq", icon: MessageCircle }
 ];
 
-const overviewIcons = [Home, Images, CalendarDays, MailCheck, Shirt, UtensilsCrossed, Gift, Building2, Phone, MessageCircle];
-const scheduleIcons = [Heart, Camera, Sparkles, Wine, UtensilsCrossed, MusicNoteFallback, CakeFallback];
-const hotelImages = ["hotel-ranch.webp", "hotel-spa.webp", "hotel-cliffs.webp"];
+const overviewIcons = [Home, Images, CalendarDays, Shirt, UtensilsCrossed, MailCheck, Gift, Building2, Phone, MessageCircle];
+const scheduleIcons = [Landmark, Camera, Sparkles, Wine, UtensilsCrossed, DancingCoupleIcon, Cake];
+const dressLooks = {
+  morning: {
+    women: ["g1.jpg", "g2.jpg"],
+    men: ["n1.jpg", "n2.jpg", "n3.jpg"]
+  },
+  evening: {
+    women: ["g3.jpg", "g4.jpg", "g5.jpg"],
+    men: ["n4.jpg", "n5.jpg", "n6.jpg"]
+  }
+};
+const dressPeriodIcons = { morning: SunMedium, evening: Moon };
 
-function MusicNoteFallback(props) {
-  return <Sparkles {...props} />;
-}
-
-function CakeFallback(props) {
-  return <Heart {...props} />;
+function DancingCoupleIcon({ size = 42, strokeWidth = 1.2, ...props }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="15" cy="8" r="3.7" />
+      <circle cx="33" cy="8" r="3.7" />
+      <path d="M16 13c4.8 5 11.2 5 16 0" />
+      <path d="M15 14l-7 26h15l-8-26z" />
+      <path d="M32 13v24" />
+      <path d="M29 17l3-4 4 4" />
+      <path d="M10 22l-5 5" />
+      <path d="M36 20l7 6" />
+      <path d="M31 37l-5 6" />
+      <path d="M34 37l5 6" />
+    </svg>
+  );
 }
 
 function CoupleNames({ names }) {
@@ -170,11 +196,10 @@ function PublicWeddingSite() {
         <Hero scrollTo={scrollTo} t={t} />
         <Overview scrollTo={scrollTo} t={t} />
         <StorySection t={t} />
-        <CeremonySection t={t} />
         <ScheduleSection t={t} />
-        <RsvpSection t={t} />
         <DressCodeSection t={t} />
         <MenuSection t={t} />
+        <RsvpSection t={t} />
         <GiftsSection t={t} />
         <AccommodationsSection t={t} />
         <ContactSection t={t} />
@@ -235,16 +260,23 @@ function Header({ activeSection, mobileOpen, scrollProgress, setMobileOpen, scro
             </button>
           ))}
         </nav>
-        <button className="icon-button mobile-menu-button" type="button" onClick={() => setMobileOpen((value) => !value)} aria-label="Menu">
+        <button
+          className="icon-button mobile-menu-button"
+          type="button"
+          onClick={() => setMobileOpen((value) => !value)}
+          aria-label="Menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
+        >
           {mobileOpen ? <X size={20} /> : <MenuIcon size={20} />}
         </button>
       </div>
       {mobileOpen && (
-        <div className="mobile-nav">
+        <div id="mobile-navigation" className="mobile-nav">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
-              <button key={item.id} type="button" onClick={() => scrollTo(item.id)}>
+              <button className={activeSection === item.id ? "active" : ""} key={item.id} type="button" onClick={() => scrollTo(item.id)}>
                 <Icon size={18} />
                 {t(`nav.${item.id}`)}
               </button>
@@ -326,12 +358,12 @@ function Hero({ scrollTo, t }) {
           <div className="paper-tape tape-one"></div>
           <div className="paper-tape tape-two"></div>
           <div className="polaroid-frame">
-            <img src="/images/hero-couple.webp" alt="" />
-          </div>
-          <Flower2 className="botanical-line hero-flower" strokeWidth={1} />
-          <div className="date-stamp">
-            <span>{t("hero.names")}</span>
-            <strong>{t("hero.stamp")}</strong>
+            <img
+              src="/images/couple-hero.webp"
+              alt={t("hero.photoAlt")}
+              width="1179"
+              height="2096"
+            />
           </div>
         </div>
       </div>
@@ -386,18 +418,57 @@ function StorySection({ t }) {
         )}
         <div className="story-grid">
           <div className="story-timeline">
-            {items.map((item) => (
+            {items.map((item, index) => (
               <article className="story-moment" key={item.year}>
-                <span className="timeline-dot"></span>
-                <strong>{item.year}</strong>
-                <h3>{item.title}</h3>
-                {item.subtitle && <em>{item.subtitle}</em>}
-                {Array.isArray(item.description) ? item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{item.description}</p>}
+                <div className="story-moment-marker">
+                  <span className="story-chapter" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                  <strong>{item.year}</strong>
+                </div>
+                <div className="story-moment-copy">
+                  <h3>{item.title}</h3>
+                  {item.subtitle && <em>{item.subtitle}</em>}
+                  {Array.isArray(item.description) ? item.description.map((paragraph) => <p key={paragraph}>{paragraph}</p>) : <p>{item.description}</p>}
+                </div>
               </article>
             ))}
           </div>
-          <div className="story-collage">
-            <img src="/images/story-collage.webp" alt="" />
+          <div className="story-collage" aria-label={t("story.title")}>
+            <span className="story-paper story-paper-one" aria-hidden="true" />
+            <span className="story-paper story-paper-two" aria-hidden="true" />
+            <span className="story-paper story-paper-three" aria-hidden="true" />
+            <figure className="story-frame story-frame-monochrome">
+              <img
+                className="story-photo story-photo-monochrome"
+                src="/images/couple-monochrome.webp"
+                alt={t("story.photoAlt", { number: 1 })}
+                width="960"
+                height="1706"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <figure className="story-frame story-frame-editorial">
+              <img
+                className="story-photo story-photo-editorial"
+                src="/images/couple-editorial.webp"
+                alt={t("story.photoAlt", { number: 2 })}
+                width="1179"
+                height="2096"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <figure className="story-frame story-frame-close">
+              <img
+                className="story-photo story-photo-close"
+                src="/images/couple-hero.webp"
+                alt={t("story.photoAlt", { number: 3 })}
+                width="1179"
+                height="2096"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
         {Array.isArray(closing) && (
@@ -407,29 +478,6 @@ function StorySection({ t }) {
             ))}
           </div>
         )}
-      </div>
-    </section>
-  );
-}
-
-function CeremonySection({ t }) {
-  return (
-    <section id="ceremony" className="ceremony-section">
-      <div className="container ceremony-grid">
-        <div>
-          <SectionTitle title={t("ceremony.title")} subtitle={t("ceremony.subtitle")} align="left" />
-          <p className="section-copy">{t("ceremony.copy")}</p>
-        </div>
-        <div className="venue-panel">
-          <MapPin size={38} strokeWidth={1.2} />
-          <h3>{t("ceremony.address")}</h3>
-          <p>{t("brand.place")}</p>
-          <span>{t("ceremony.gps")}</span>
-          <a className="text-link" href={t("ceremony.mapsUrl")} target="_blank" rel="noreferrer">
-            {t("ceremony.maps")}
-            <ArrowRight size={16} />
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -470,8 +518,6 @@ function RsvpSection({ t }) {
     email: "",
     phone: "",
     attendance: "both",
-    partySize: "1",
-    menuChoice: "menu1",
     dietaryRequirements: "",
     message: ""
   });
@@ -514,19 +560,22 @@ function RsvpSection({ t }) {
 
     setIsSubmitting(true);
     try {
-      await apiRequest("/rsvp", {
+      const result = await apiRequest("/rsvp", {
         method: "POST",
         body: JSON.stringify({
           ...form,
-          partySize: Number(form.partySize),
-          menuChoice: attendsReception ? form.menuChoice : undefined,
           dietaryRequirements: attendsReception ? form.dietaryRequirements : ""
         })
       });
-      setStatus({ type: "success", message: t("rsvp.success") });
+      const emailWasExpected = ["ceremony", "reception", "both"].includes(form.attendance);
+      const emailFailed = emailWasExpected && ["failed", "skipped"].includes(result.confirmationEmail);
+      setStatus({
+        type: emailFailed ? "warning" : "success",
+        message: emailFailed ? t("rsvp.emailFailed") : result.confirmationEmail === "sent" ? t("rsvp.successEmailSent") : t("rsvp.success")
+      });
       setForm((current) => ({ ...current, dietaryRequirements: "", message: "" }));
     } catch (error) {
-      setStatus({ type: "error", message: error.message });
+      setStatus({ type: "error", message: error.code === "REQUEST_TIMEOUT" ? t("rsvp.timeout") : error.message });
     } finally {
       setIsSubmitting(false);
     }
@@ -569,30 +618,6 @@ function RsvpSection({ t }) {
                 ))}
               </div>
             </fieldset>
-            <div className="form-row">
-              <label>
-                {t("rsvp.partySize")} <span>*</span>
-                <select name="partySize" value={form.partySize} onChange={updateField}>
-                  {[1, 2, 3, 4, 5, 6].map((value) => (
-                    <option key={value} value={value}>
-                      {value}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              {attendsReception && (
-                <label>
-                  {t("rsvp.menuChoice")}
-                  <select name="menuChoice" value={form.menuChoice} onChange={updateField}>
-                    {Object.entries(t("rsvp.menus", { returnObjects: true })).map(([value, label]) => (
-                      <option key={value} value={value}>
-                        {label}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-              )}
-            </div>
             {attendsReception && (
               <label>
                 {t("rsvp.dietary")}
@@ -605,9 +630,9 @@ function RsvpSection({ t }) {
             </label>
             <button className="primary-button clay" type="submit" disabled={isSubmitting}>
               {isSubmitting ? t("rsvp.submitting") : t("rsvp.submit")}
-              <ArrowRight size={18} />
+              {isSubmitting ? <LoaderCircle className="button-spinner" size={18} /> : <ArrowRight size={18} />}
             </button>
-            {status.message && <p className={`form-status ${status.type}`}>{status.message}</p>}
+            {status.message && <p className={`form-status ${status.type}`} role="status" aria-live="polite">{status.message}</p>}
           </form>
           <aside className="rsvp-card">
             <MailCheck size={54} strokeWidth={1.2} />
@@ -621,7 +646,6 @@ function RsvpSection({ t }) {
             <strong>{t("rsvp.deadline")}</strong>
             <Divider />
             <em>{t("rsvp.aside")}</em>
-            <Flower2 className="rsvp-flower" strokeWidth={1} />
           </aside>
         </div>
       </div>
@@ -630,40 +654,83 @@ function RsvpSection({ t }) {
 }
 
 function DressCodeSection({ t }) {
-  const swatches = t("dress.swatches", { returnObjects: true });
+  const periods = t("dress.periods", { returnObjects: true });
 
   return (
     <section id="dress" className="dress-section section-offset">
       <div className="container dress-panel">
         <SectionTitle title={t("dress.title")} subtitle={t("dress.subtitle")} />
         <p className="dress-intro">{t("dress.copy")}</p>
-        <div className="dress-code-layout">
-          <article className="dress-look-card">
-            <h3>{t("dress.forHer.title")}</h3>
-            <p>{t("dress.forHer.copy")}</p>
-            <img className="dress-look-image women" src="/images/dress-code-women.png" alt="" />
-          </article>
-          <div className="dress-center-line" aria-hidden="true"></div>
-          <article className="dress-look-card">
-            <h3>{t("dress.forHim.title")}</h3>
-            <p>{t("dress.forHim.copy")}</p>
-            <img className="dress-look-image men" src="/images/dress-code-men.png" alt="" />
-          </article>
+        <div className="dress-periods">
+          {Array.isArray(periods) && periods.map((period) => {
+            const PeriodIcon = dressPeriodIcons[period.id] || Shirt;
+            const looks = dressLooks[period.id] || { women: [], men: [] };
+
+            return (
+              <article className={`dress-period dress-period-${period.id}`} key={period.id}>
+                <header className="dress-period-header">
+                  <span className="dress-period-number">{period.number}</span>
+                  <PeriodIcon size={27} strokeWidth={1.35} />
+                  <div>
+                    <p>{period.time}</p>
+                    <h3>{period.title}</h3>
+                    <span>{period.copy}</span>
+                  </div>
+                </header>
+
+                <div className="dress-palette-block">
+                  <h4>{t("dress.paletteLabel")}</h4>
+                  <div className="dress-palette">
+                    {period.colors.map((color) => (
+                      <div className="dress-swatch" key={`${period.id}-${color.hex}`}>
+                        <span className="dress-swatch-color" style={{ backgroundColor: color.hex }}></span>
+                        <code>{color.hex}</code>
+                        {color.menOnly && <small>{t("dress.menOnly")}</small>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {period.rules?.length > 0 && (
+                  <div className="dress-rules">
+                    {period.rules.map((rule) => (
+                      <p className={rule.type} key={rule.text}>
+                        {rule.type === "avoid" ? <Ban size={18} /> : <CheckCircle2 size={18} />}
+                        <span>{rule.text}</span>
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                <div className="dress-inspiration">
+                  <h4>{t("dress.inspiration")}</h4>
+                  <div className="dress-galleries">
+                    {[["women", t("dress.forHer")], ["men", t("dress.forHim")]].map(([group, label]) => (
+                      <div className={`dress-gallery dress-gallery-${group}`} key={group}>
+                        <p>{label}</p>
+                        <div className="dress-gallery-grid">
+                          {looks[group].map((file, index) => (
+                            <figure key={file}>
+                              <img
+                                src={`/images/dress_code/${file}`}
+                                alt={t("dress.imageAlt", { group: label, number: index + 1 })}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            </figure>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
-        <div className="dress-bottom-note">
-          <p>{t("dress.note")}</p>
-          {Array.isArray(swatches) && (
-            <div className="dress-color-row">
-              {swatches.map((swatch) => (
-                <span key={swatch.hex} title={swatch.name} style={{ background: swatch.hex }}></span>
-              ))}
-            </div>
-          )}
-          <div className="mini-heart-line">
-            <span></span>
-            <Heart size={14} />
-            <span></span>
-          </div>
+        <div className="dress-shared-note">
+          <Heart size={17} />
+          <p>{t("dress.sharedNote")}</p>
         </div>
       </div>
     </section>
@@ -688,18 +755,22 @@ function MenuSection({ t }) {
         <div className="menu-divider">
           <Heart size={30} />
         </div>
+        <p className="menu-note">{t("menu.note")}</p>
       </div>
     </section>
   );
 }
 
 function GiftsSection({ t }) {
+  const paragraphs = t("gifts.copy", { returnObjects: true });
+
   return (
     <section id="gifts" className="gifts-section section-offset">
       <div className="container gifts-panel">
-        <div>
+        <div className="gifts-copy">
           <SectionTitle title={t("gifts.title")} subtitle={t("gifts.subtitle")} align="left" />
-          <p>{t("gifts.copy")}</p>
+          {Array.isArray(paragraphs) && paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <strong>{t("gifts.signature")}</strong>
         </div>
         <a className="primary-button" href={t("gifts.url")} target="_blank" rel="noreferrer">
           {t("gifts.cta")}
@@ -711,24 +782,44 @@ function GiftsSection({ t }) {
 }
 
 function AccommodationsSection({ t }) {
+  const railRef = useRef(null);
   const items = [...t("accommodations.items", { returnObjects: true })]
-    .sort((a, b) => parseDistance(a.distance) - parseDistance(b.distance))
-    .slice(0, 3);
+    .sort((a, b) => parseDistance(a.distance) - parseDistance(b.distance));
+
+  const moveRail = (direction) => {
+    const rail = railRef.current;
+    if (!rail) return;
+    rail.scrollBy({ left: direction * Math.max(rail.clientWidth * 0.88, 280), behavior: "smooth" });
+  };
 
   return (
     <section id="accommodations" className="accommodation-section section-offset">
       <div className="container">
-        <SectionTitle title={t("accommodations.title")} subtitle={t("accommodations.subtitle")} />
-        <div className="hotel-grid">
+        <div className="accommodation-heading">
+          <SectionTitle title={t("accommodations.title")} subtitle={t("accommodations.subtitle")} />
+          <div className="hotel-controls">
+            <button type="button" onClick={() => moveRail(-1)} aria-label={t("accommodations.previous")}>
+              <ChevronLeft size={20} />
+            </button>
+            <button type="button" onClick={() => moveRail(1)} aria-label={t("accommodations.next")}>
+              <ChevronRight size={20} />
+            </button>
+          </div>
+        </div>
+        <div className="hotel-grid" ref={railRef}>
           {items.map((item, index) => (
             <article className="hotel-card" key={item.name}>
-              <img src={`/images/${hotelImages[index % hotelImages.length]}`} alt="" />
-              <div>
+              <div className="hotel-card-heading">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <Building2 size={30} strokeWidth={1.25} />
+              </div>
+              <div className="hotel-card-copy">
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <span className="hotel-distance">{item.distance}</span>
                 <a href={item.url} target="_blank" rel="noreferrer">
                   {t("accommodations.maps")}
+                  <ArrowRight size={16} />
                 </a>
               </div>
             </article>
@@ -757,8 +848,26 @@ function ContactSection({ t }) {
               <div className="planner-entry" key={`${planner.role}-${planner.name}`}>
                 <span>{planner.role}</span>
                 <h3>{planner.name}</h3>
-                {planner.phone && <a href={`tel:${planner.phone}`}>{planner.phone}</a>}
-                {planner.email && <a href={`mailto:${planner.email}`}>{planner.email}</a>}
+                <div className="planner-contact-links">
+                  {planner.phone && (
+                    <a href={`tel:${planner.phone}`}>
+                      <Phone size={15} />
+                      {planner.phone}
+                    </a>
+                  )}
+                  {planner.phone && (
+                    <a href={`https://wa.me/${planner.phone.replace(/\D/g, "")}`} target="_blank" rel="noreferrer">
+                      <MessageCircle size={15} />
+                      {t("contact.whatsapp")}
+                    </a>
+                  )}
+                  {planner.email && (
+                    <a href={`mailto:${planner.email}`}>
+                      <Mail size={15} />
+                      {planner.email}
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
         </div>
@@ -890,12 +999,16 @@ function Divider() {
 }
 
 function AdminApp() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [token, setToken] = useState(() => window.localStorage.getItem("wedding_admin_token"));
   const [password, setPassword] = useState("");
   const [dashboard, setDashboard] = useState(null);
   const [guestForm, setGuestForm] = useState({ fullName: "", email: "", phone: "", allowedPlusOnes: 0 });
   const [message, setMessage] = useState("");
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+    document.documentElement.lang = language;
+  };
 
   const loadDashboard = async () => {
     try {
@@ -967,7 +1080,7 @@ function AdminApp() {
     });
 
     if (!response.ok) {
-      setMessage("Import failed");
+      setMessage(t("admin.importFailed"));
       return;
     }
 
@@ -978,6 +1091,7 @@ function AdminApp() {
     return (
       <div className="admin-shell login-view">
         <form className="admin-login" onSubmit={login}>
+          <AdminLanguageSwitch changeLanguage={changeLanguage} i18n={i18n} />
           <LogoBlock />
           <h1>{t("admin.title")}</h1>
           <label>
@@ -997,11 +1111,14 @@ function AdminApp() {
   const stats = dashboard?.stats || {};
   const guests = dashboard?.guests || [];
   const responses = dashboard?.rsvps || [];
+  const statLabels = t("admin.statLabels", { returnObjects: true });
+  const attendanceLabels = t("admin.attendanceLabels", { returnObjects: true });
 
   return (
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <LogoBlock />
+        <AdminLanguageSwitch changeLanguage={changeLanguage} i18n={i18n} />
         <button className="text-link" type="button" onClick={logout}>
           <LogOut size={16} />
           {t("admin.logout")}
@@ -1027,9 +1144,9 @@ function AdminApp() {
         </div>
         {message && <p className="form-status error">{message}</p>}
         <div className="stat-grid">
-          {["attending", "declined", "pending", "menu1", "menu2"].map((key) => (
+          {["attending", "declined", "pending"].map((key) => (
             <article className="stat-card" key={key}>
-              <span>{key}</span>
+              <span>{statLabels[key] || key}</span>
               <strong>{stats[key] ?? 0}</strong>
             </article>
           ))}
@@ -1050,12 +1167,13 @@ function AdminApp() {
           <h2>{t("admin.guests")}</h2>
           <DataTable
             columns={[t("admin.fullName"), t("admin.email"), t("admin.phone"), t("admin.allowedPlusOnes"), ""]}
+            emptyLabel={t("admin.empty")}
             rows={guests.map((guest) => [
               guest.fullName,
               guest.email || "-",
               guest.phone || "-",
               guest.allowedPlusOnes ?? 0,
-              <button className="icon-button" type="button" onClick={() => removeGuest(guest._id || guest.id)} aria-label="Delete" key="delete">
+              <button className="icon-button" type="button" onClick={() => removeGuest(guest._id || guest.id)} aria-label={t("admin.delete")} key="delete">
                 <Trash2 size={16} />
               </button>
             ])}
@@ -1064,17 +1182,29 @@ function AdminApp() {
         <section className="admin-section">
           <h2>{t("admin.responses")}</h2>
           <DataTable
-            columns={[t("admin.fullName"), t("admin.email"), t("admin.status"), t("rsvp.menuChoice"), t("rsvp.dietary")]}
+            columns={[t("admin.fullName"), t("admin.email"), t("admin.status"), t("rsvp.dietary")]}
+            emptyLabel={t("admin.empty")}
             rows={responses.map((rsvp) => [
               rsvp.fullName,
               rsvp.email,
-              rsvp.attendance,
-              rsvp.menuChoice || "-",
+              attendanceLabels[rsvp.attendance] || rsvp.attendance,
               rsvp.dietaryRequirements || "-"
             ])}
           />
         </section>
       </main>
+    </div>
+  );
+}
+
+function AdminLanguageSwitch({ changeLanguage, i18n }) {
+  return (
+    <div className="admin-language language-switch" aria-label="Language switcher">
+      {["fr", "en"].map((lng) => (
+        <button key={lng} className={i18n.language === lng ? "active" : ""} type="button" onClick={() => changeLanguage(lng)}>
+          {lng.toUpperCase()}
+        </button>
+      ))}
     </div>
   );
 }
@@ -1093,21 +1223,21 @@ function LogoBlock() {
   );
 }
 
-function DataTable({ columns, rows }) {
+function DataTable({ columns, rows, emptyLabel = "-" }) {
   return (
     <div className="table-wrap">
       <table>
         <thead>
           <tr>
-            {columns.map((column) => (
-              <th key={column}>{column}</th>
+            {columns.map((column, index) => (
+              <th key={`${column}-${index}`}>{column}</th>
             ))}
           </tr>
         </thead>
         <tbody>
           {rows.length === 0 ? (
             <tr>
-              <td colSpan={columns.length}>-</td>
+              <td colSpan={columns.length}>{emptyLabel}</td>
             </tr>
           ) : (
             rows.map((row, rowIndex) => (
