@@ -106,42 +106,42 @@
     "subtitle": "D'un bonjour à un pour toujours",
     "photoAlt": "Stella et Geovanni, photo {{number}}",
     "intro": [
-      "Tout a commencé par un simple bonjour sous l'arbre des étudiants. Année après année, cette amitié nous a menés jusqu'ici."
+      "Tout a commencé par un simple bonjour sous UN ARBRE. Année après année, cette amitié nous a menés jusqu'ici"
     ],
     "items": [
       {
         "year": "2017",
         "title": "L'école de droit",
         "subtitle": "De simples camarades",
-        "description": "Un bonjour, un sourire, puis des échanges grâce à un ami commun. Une belle amitié est née."
+        "description": "Notre amitié est née par un pur hasard sous un arbre à l'école de droit. On a ensuite repris contact et véritablement noué des liens par un ami en commun. C'était le début d'une belle aventure."
       },
       {
         "year": "2018",
         "title": "La France",
         "subtitle": "Des kilomètres entre nous",
-        "description": "Geovanni part en France. Malgré la distance et nos nouvelles vies, nous restons proches."
+        "description": "Un an plus tard, Geovanni part en France, mais malgré la distance et ce nouveau départ, nous restons proches en toute amitié."
       },
       {
         "year": "2019",
-        "title": "Tunisie puis France",
+        "title": "La Tunisie, puis la France",
         "subtitle": "Jamais vraiment loin",
-        "description": "En décembre, notre précieuse amitié devient doucement une histoire d'amour à distance."
+        "description": "Cette année-là, c'est au tour de Stella de prendre son envol pour la Tunisie. Vers la fin de l'année, quelque chose a changé. Sans nous en rendre compte, notre belle amitié s'est transformée en histoire d'amour."
       },
       {
         "year": "2020",
-        "title": "Réunis en France",
+        "title": "Nous sommes réunis en France",
         "subtitle": "Et si tout était écrit ?",
-        "description": "Stella rejoint Geovanni en France et découvre qu'il avait un faible pour elle bien avant qu'elle ne le sache."
+        "description": "Le destin, après nous avoir séparés, décide finalement de nous réunir : Stella rejoint à son tour la France. Et par la même occasion elle découvre que Geovanni a toujours eu un faible pour elle, bien avant qu'elle ne s'en doute."
       },
       {
         "year": "2026",
         "title": "Pour toujours",
         "subtitle": "Notre plus beau chapitre",
-        "description": "Des années après ce premier bonjour, nous choisissons de célébrer notre union avec vous."
+        "description": "Des années après ce premier bonjour, nous célébrons aujourd'hui notre union avec vous."
       }
     ],
     "closing": [
-      "Une histoire commencée par un bonjour trouve aujourd'hui son plus beau pour toujours."
+      "Si notre histoire a commencé par un simple bonjour, nous avons aujourd'hui la chance de pouvoir lui donner le plus beau des pour toujours"
     ]
   },
   "ceremony": {

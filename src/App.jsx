@@ -52,7 +52,176 @@ const navItems = [
   { id: "faq", icon: MessageCircle }
 ];
 
-const overviewIcons = [Home, Images, CalendarDays, Shirt, UtensilsCrossed, MailCheck, Gift, Building2, Phone, MessageCircle];
+function OverviewIconSvg({ size = 54, strokeWidth = 1.2, children, ...props }) {
+  return (
+    <svg
+      aria-hidden="true"
+      width={size}
+      height={size}
+      viewBox="8 8 48 48"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      {children}
+    </svg>
+  );
+}
+
+function OverviewHomeIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M15.5 32.2 32 17.6l16.5 14.6" />
+      <path d="M20.5 28.6V49h23V28.6" />
+      <path d="M28.5 49V37h7v12" />
+      <path d="M15 49h34" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewPhotoIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <g transform="rotate(-8 25 34)">
+        <rect x="15.5" y="22" width="20" height="25" rx="1.6" />
+        <path d="M18.5 39.5 23 35l3.2 3.1 3.1-3.7 4.2 5.1" />
+        <circle cx="29.4" cy="27.8" r="2.2" />
+      </g>
+      <g transform="rotate(6 39 30)">
+        <rect x="28.5" y="17.5" width="20" height="25" rx="1.6" />
+        <path d="M31.5 35 36 30.4l3.2 3.3 3.2-4 3.1 4.8" />
+        <circle cx="42.4" cy="23.2" r="2.2" />
+      </g>
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewCalendarIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <rect x="18" y="17" width="28" height="34" rx="2" />
+      <path d="M18 25h28" />
+      <path d="M25 13.5V20" />
+      <path d="M39 13.5V20" />
+      <path d="M29.2 39.6c-3.8-3-5.8-5.1-5.8-7.4 0-2 1.4-3.4 3.4-3.4 1.2 0 2.2.8 3 2 0.8-1.2 1.8-2 3-2 2 0 3.4 1.4 3.4 3.4 0 2.3-2 4.4-5.8 7.4l-.6.5-.6-.5Z" />
+      <path d="M39.5 44c3.9-2.4 5.9-5.7 5.9-9.6" />
+      <path d="M43.2 40.2c2.4.3 4.1-.6 5.4-2.4" />
+      <path d="M42.6 36.2c2.1-.8 3.1-2.2 3.4-4.1" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewEnvelopeIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <rect x="14.5" y="23" width="35" height="23" rx="2" />
+      <path d="m16 26 16 12.5L48 26" />
+      <path d="m16 44 11.6-10" />
+      <path d="m48 44-11.6-10" />
+      <path d="M32 35.8c-4.1-3.1-6.1-5-6.1-7.2a3.2 3.2 0 0 1 3.3-3.2c1.3 0 2.2.8 2.8 1.8.6-1 1.5-1.8 2.8-1.8a3.2 3.2 0 0 1 3.3 3.2c0 2.2-2 4.1-6.1 7.2Z" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewBowTieIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M14.5 24.5c7.5.6 13.4 3.3 17.5 7.5-4.1 4.2-10 6.9-17.5 7.5-2.2-4.6-2.2-10.4 0-15Z" fill="currentColor" strokeWidth="0.8" />
+      <path d="M49.5 24.5C42 25.1 36.1 27.8 32 32c4.1 4.2 10 6.9 17.5 7.5 2.2-4.6 2.2-10.4 0-15Z" fill="currentColor" strokeWidth="0.8" />
+      <rect x="28.4" y="27.6" width="7.2" height="8.8" rx="1.8" fill="currentColor" strokeWidth="0.8" />
+      <path d="M12 41.5c4.1 1.2 8.5 1.2 13.3-.1" />
+      <path d="M38.7 41.4c4.8 1.3 9.2 1.3 13.3.1" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewClocheIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M15 43h34" />
+      <path d="M19 40c1.5-11.3 7.8-19.4 13-19.4S43.5 28.7 45 40" />
+      <path d="M28 20.8a4 4 0 0 1 8 0" />
+      <path d="M12.5 36.5h3.2" />
+      <path d="M10.8 31.7l2.4 1.7" />
+      <path d="M16.8 27.8l1.2 2.7" />
+      <path d="M44 31c3.4-2 5.1-4.8 5.1-8.3" />
+      <path d="M47.1 28.1c2.1.2 3.7-.6 4.8-2" />
+      <path d="M46.6 24.6c1.8-.7 2.8-1.9 3.1-3.5" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewGiftIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <rect x="17" y="29" width="30" height="22" rx="1.5" />
+      <path d="M15.5 25h33v7H15.5z" />
+      <path d="M32 25v26" />
+      <path d="M24 25c-1.7-2.8-1.6-5.4.3-6.6 2-1.3 5.1.1 7.7 6.6" />
+      <path d="M40 25c1.7-2.8 1.6-5.4-.3-6.6-2-1.3-5.1.1-7.7 6.6" />
+      <path d="M46 45c3.5-2.1 5.2-4.9 5.2-8.5" />
+      <path d="M49.2 42c2 .2 3.5-.5 4.6-1.9" />
+      <path d="M48.7 38.6c1.7-.7 2.6-1.8 2.9-3.3" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewBuildingIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M19 50V23.5L32 16l13 7.5V50" />
+      <path d="M16 50h32" />
+      <path d="M27.5 50V39h9v11" />
+      <path d="M25 28h3.5" />
+      <path d="M35.5 28H39" />
+      <path d="M25 35h3.5" />
+      <path d="M35.5 35H39" />
+      <path d="M12.8 50V37.5" />
+      <path d="M8.8 39.5c1.6-4.2 3-6.3 4-6.3s2.4 2.1 4 6.3" />
+      <path d="M51.2 50v-9" />
+      <path d="M48.3 43.2c1.2-3.1 2.2-4.7 2.9-4.7.8 0 1.8 1.6 3 4.7" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewPhoneIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M26.6 15.5c-4.8 2.7-6.3 6.4-3.7 11.4 3 5.7 7.5 10.2 13.2 13.2 5 2.6 8.7 1.1 11.4-3.7l-7.2-5.5-4.7 3c-3.5-2.1-6.4-5-8.5-8.5l3-4.7-3.5-5.2Z" />
+      <path d="M40.6 28.8c4.5-2.6 6.8-6.4 6.8-11.2" />
+      <path d="M44.4 24.7c2.6.3 4.6-.7 6-2.6" />
+      <path d="M43.7 20.6c2.3-.9 3.5-2.4 3.9-4.5" />
+    </OverviewIconSvg>
+  );
+}
+
+function OverviewChatIcon(props) {
+  return (
+    <OverviewIconSvg {...props}>
+      <path d="M17 24.5h24.5a7 7 0 0 1 7 7v6.5a7 7 0 0 1-7 7H29.8L20 51l2.4-6H17a7 7 0 0 1-7-7v-6.5a7 7 0 0 1 7-7Z" />
+      <path d="M27.5 16h19a7 7 0 0 1 7 7v6.5c0 2.2-1 4.2-2.5 5.5" />
+      <path d="M24.5 35h.1" />
+      <path d="M31.5 35h.1" />
+      <path d="M38.5 35h.1" />
+    </OverviewIconSvg>
+  );
+}
+
+const overviewIconById = {
+  home: OverviewHomeIcon,
+  story: OverviewPhotoIcon,
+  schedule: OverviewCalendarIcon,
+  rsvp: OverviewEnvelopeIcon,
+  dress: OverviewBowTieIcon,
+  menu: OverviewClocheIcon,
+  gifts: OverviewGiftIcon,
+  accommodations: OverviewBuildingIcon,
+  contact: OverviewPhoneIcon,
+  faq: OverviewChatIcon
+};
 const scheduleIcons = [Landmark, Camera, Sparkles, Wine, UtensilsCrossed, DancingCoupleIcon, Cake];
 const dressLooks = {
   morning: {
@@ -380,7 +549,7 @@ function Overview({ scrollTo, t }) {
         <Heart className="tiny-heart" size={18} />
         <div className="overview-grid">
           {items.map((item, index) => {
-            const Icon = overviewIcons[index] || Heart;
+            const Icon = overviewIconById[item.id] || Heart;
             return (
               <button className="overview-card" key={item.id} type="button" onClick={() => scrollTo(item.id)}>
                 <span className="icon-wash">
@@ -460,7 +629,7 @@ function StorySection({ t }) {
             <figure className="story-frame story-frame-close">
               <img
                 className="story-photo story-photo-close"
-                src="/images/couple-hero.webp"
+                src="/images/couple.webp"
                 alt={t("story.photoAlt", { number: 3 })}
                 width="1179"
                 height="2096"
