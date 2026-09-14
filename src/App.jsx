@@ -1086,7 +1086,7 @@ function BottomCta({ scrollTo, t }) {
           <ArrowRight size={18} />
         </button>
       </div>
-      <img src="/images/stationery-cta.webp" alt="" />
+      <img src="/images/stationery-cta-sg.png" alt="" />
     </section>
   );
 }

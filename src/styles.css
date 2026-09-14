@@ -577,7 +577,7 @@ img {
   padding: 2rem;
   background:
     linear-gradient(rgba(253, 251, 247, 0.88), rgba(253, 251, 247, 0.94)),
-    url("/images/stationery-cta.webp") center / cover;
+    url("/images/stationery-cta-sg.png") center / cover;
 }
 
 .access-card {
@@ -2618,6 +2618,10 @@ th {
   }
 
   .tape-one {
+    display: none;
+  }
+
+  .tape-two {
     display: none;
   }
 
