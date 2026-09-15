@@ -2282,6 +2282,12 @@ td {
   text-align: left;
 }
 
+.admin-message-cell {
+  display: block;
+  max-width: 22rem;
+  white-space: pre-wrap;
+}
+
 th {
   font-size: 0.78rem;
   text-transform: uppercase;

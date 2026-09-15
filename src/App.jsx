@@ -1355,13 +1355,14 @@ function AdminApp() {
         <section className="admin-section">
           <h2>{t("admin.responses")}</h2>
           <DataTable
-            columns={[t("admin.fullName"), t("admin.email"), t("admin.status"), t("rsvp.dietary")]}
+            columns={[t("admin.fullName"), t("admin.email"), t("admin.status"), t("rsvp.dietary"), t("rsvp.message")]}
             emptyLabel={t("admin.empty")}
             rows={responses.map((rsvp) => [
               rsvp.fullName,
               rsvp.email,
               attendanceLabels[rsvp.attendance] || rsvp.attendance,
-              rsvp.dietaryRequirements || "-"
+              rsvp.dietaryRequirements || "-",
+              <span className="admin-message-cell" key="message">{rsvp.message || "-"}</span>
             ])}
           />
         </section>
